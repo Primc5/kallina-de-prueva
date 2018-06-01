@@ -8,7 +8,7 @@
 import Firebase
 import UIKit
 
-class VCRegisterView: UIViewController {
+class VCRegisterView: UIViewController, DataHolderDelegate {
     
      @IBOutlet var txtEmail:UITextField?
      @IBOutlet var txtUser:UITextField?
@@ -29,6 +29,16 @@ class VCRegisterView: UIViewController {
     }
     
    @IBAction func clickRegister(){
+    
+    
+    Dataholder.sharedInstance.email = (txtEmail?.text)!
+    Dataholder.sharedInstance.user = (txtUser?.text)!
+    Dataholder.sharedInstance.pass = (txtPassword?.text)!
+    Dataholder.sharedInstance.repass = (txtRePassword?.text)!
+    
+    
+    Dataholder.sharedInstance.Registro(delegate: self, sEmail: (txtEmail?.text)!, sPass: (txtPassword?.text)!)
+    /*
        Auth.auth().createUser(withEmail: (txtEmail?.text)!, password: (txtPassword?.text)!){
             (email, error)in
             if self.txtPassword?.text != self.txtRePassword?.text{
@@ -43,7 +53,7 @@ class VCRegisterView: UIViewController {
             else{
                 print(error!)
             }
-        }
+        }*/
     }
  
     
@@ -55,6 +65,10 @@ class VCRegisterView: UIViewController {
         // Pass the selected object to the new view controller.
     }
     
-
+    func dataHolderRegister(blfin: Bool) {
+        if blfin==true{
+            self.performSegue(withIdentifier: "trregistro", sender: self)
+        }
+    }
 }
 

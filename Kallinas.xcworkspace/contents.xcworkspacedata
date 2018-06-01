@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../EntregasIOS">
+   </FileRef>
+   <FileRef
       location = "group:Kallinas.xcodeproj">
    </FileRef>
    <FileRef

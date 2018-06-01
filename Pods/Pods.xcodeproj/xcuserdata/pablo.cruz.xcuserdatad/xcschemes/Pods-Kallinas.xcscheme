@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5837E1C6666C956386A202F4BEEB5410"
-               BuildableName = "Pods_practicaIOS.framework"
-               BlueprintName = "Pods-practicaIOS"
+               BlueprintIdentifier = "470780A0927D7470F4D9E90B146FF229"
+               BuildableName = "Pods_Kallinas.framework"
+               BlueprintName = "Pods-Kallinas"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5837E1C6666C956386A202F4BEEB5410"
-            BuildableName = "Pods_practicaIOS.framework"
-            BlueprintName = "Pods-practicaIOS"
+            BlueprintIdentifier = "470780A0927D7470F4D9E90B146FF229"
+            BuildableName = "Pods_Kallinas.framework"
+            BlueprintName = "Pods-Kallinas"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
