@@ -1,0 +1,6 @@
+framework module Pods_Kallinas {
+  umbrella header "Pods-Kallinas-umbrella.h"
+
+  export *
+  module * { export * }
+}

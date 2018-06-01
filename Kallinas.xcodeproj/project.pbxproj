@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3333362420C154D60004FA04 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333362320C154D60004FA04 /* DataHolder.swift */; };
+		3333362620C15D7B0004FA04 /* VCRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333362520C15D7B0004FA04 /* VCRegisterView.swift */; };
+		3333362820C169A60004FA04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3333362720C169A60004FA04 /* GoogleService-Info.plist */; };
 		3373D5E020BD6BDE002A2A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3373D5DF20BD6BDE002A2A35 /* AppDelegate.swift */; };
 		3373D5E220BD6BDE002A2A35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3373D5E120BD6BDE002A2A35 /* ViewController.swift */; };
 		3373D5E520BD6BDE002A2A35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3373D5E320BD6BDE002A2A35 /* Main.storyboard */; };
 		3373D5E820BD6BDE002A2A35 /* Kallinas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3373D5E620BD6BDE002A2A35 /* Kallinas.xcdatamodeld */; };
 		3373D5EA20BD6BE0002A2A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3373D5E920BD6BE0002A2A35 /* Assets.xcassets */; };
 		3373D5ED20BD6BE0002A2A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3373D5EB20BD6BE0002A2A35 /* LaunchScreen.storyboard */; };
+		8D0D187EC736330367B2BF8C /* Pods_Kallinas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99269A1B0D07F75F23927B95 /* Pods_Kallinas.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3333362320C154D60004FA04 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
+		3333362520C15D7B0004FA04 /* VCRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegisterView.swift; sourceTree = "<group>"; };
+		3333362720C169A60004FA04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3373D5DC20BD6BDE002A2A35 /* Kallinas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kallinas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3373D5DF20BD6BDE002A2A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3373D5E120BD6BDE002A2A35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		3373D5E920BD6BE0002A2A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3373D5EC20BD6BE0002A2A35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3373D5EE20BD6BE0002A2A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99269A1B0D07F75F23927B95 /* Pods_Kallinas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kallinas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D5679118D7FBD49B4E911F5 /* Pods-Kallinas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kallinas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kallinas/Pods-Kallinas.release.xcconfig"; sourceTree = "<group>"; };
+		B8AC3D9B95164D17C6FFACEA /* Pods-Kallinas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kallinas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kallinas/Pods-Kallinas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0D187EC736330367B2BF8C /* Pods_Kallinas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				3373D5DE20BD6BDE002A2A35 /* Kallinas */,
 				3373D5DD20BD6BDE002A2A35 /* Products */,
+				F313E13A972892FB47214812 /* Pods */,
+				45EA1675FAB09AB98C49BFAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +69,7 @@
 		3373D5DE20BD6BDE002A2A35 /* Kallinas */ = {
 			isa = PBXGroup;
 			children = (
+				3333362720C169A60004FA04 /* GoogleService-Info.plist */,
 				3373D5DF20BD6BDE002A2A35 /* AppDelegate.swift */,
 				3373D5E120BD6BDE002A2A35 /* ViewController.swift */,
 				3373D5E320BD6BDE002A2A35 /* Main.storyboard */,
@@ -63,8 +77,27 @@
 				3373D5EB20BD6BE0002A2A35 /* LaunchScreen.storyboard */,
 				3373D5EE20BD6BE0002A2A35 /* Info.plist */,
 				3373D5E620BD6BDE002A2A35 /* Kallinas.xcdatamodeld */,
+				3333362320C154D60004FA04 /* DataHolder.swift */,
+				3333362520C15D7B0004FA04 /* VCRegisterView.swift */,
 			);
 			path = Kallinas;
+			sourceTree = "<group>";
+		};
+		45EA1675FAB09AB98C49BFAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99269A1B0D07F75F23927B95 /* Pods_Kallinas.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F313E13A972892FB47214812 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8AC3D9B95164D17C6FFACEA /* Pods-Kallinas.debug.xcconfig */,
+				9D5679118D7FBD49B4E911F5 /* Pods-Kallinas.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3373D5F120BD6BE0002A2A35 /* Build configuration list for PBXNativeTarget "Kallinas" */;
 			buildPhases = (
+				FCCC13B1486B70B9B2A37B50 /* [CP] Check Pods Manifest.lock */,
 				3373D5D820BD6BDE002A2A35 /* Sources */,
 				3373D5D920BD6BDE002A2A35 /* Frameworks */,
 				3373D5DA20BD6BDE002A2A35 /* Resources */,
+				12AEE2C654826EAB69F22B49 /* [CP] Embed Pods Frameworks */,
+				8D5C04CE355EF02B63F78286 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,12 +162,85 @@
 			buildActionMask = 2147483647;
 			files = (
 				3373D5ED20BD6BE0002A2A35 /* LaunchScreen.storyboard in Resources */,
+				3333362820C169A60004FA04 /* GoogleService-Info.plist in Resources */,
 				3373D5EA20BD6BE0002A2A35 /* Assets.xcassets in Resources */,
 				3373D5E520BD6BDE002A2A35 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12AEE2C654826EAB69F22B49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kallinas/Pods-Kallinas-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kallinas/Pods-Kallinas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D5C04CE355EF02B63F78286 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kallinas/Pods-Kallinas-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCCC13B1486B70B9B2A37B50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kallinas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3373D5D820BD6BDE002A2A35 /* Sources */ = {
@@ -141,6 +250,8 @@
 				3373D5E820BD6BDE002A2A35 /* Kallinas.xcdatamodeld in Sources */,
 				3373D5E220BD6BDE002A2A35 /* ViewController.swift in Sources */,
 				3373D5E020BD6BDE002A2A35 /* AppDelegate.swift in Sources */,
+				3333362420C154D60004FA04 /* DataHolder.swift in Sources */,
+				3333362620C15D7B0004FA04 /* VCRegisterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +393,7 @@
 		};
 		3373D5F220BD6BE0002A2A35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8AC3D9B95164D17C6FFACEA /* Pods-Kallinas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +411,7 @@
 		};
 		3373D5F320BD6BE0002A2A35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D5679118D7FBD49B4E911F5 /* Pods-Kallinas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
