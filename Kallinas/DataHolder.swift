@@ -15,6 +15,7 @@ class Dataholder: NSObject {
     var fireStoreDB:Firestore?
     var firStorage:Storage?
     
+    var miPerfil:Perfil = Perfil()
     var user:String = ""
     var email:String = ""
     var pass:String = ""
@@ -26,7 +27,34 @@ class Dataholder: NSObject {
         fireStoreDB = Firestore.firestore()
         firStorage = Storage.storage()
     }
-    
+    var sID:String = ""
+    func Login(delegate:DataHolderDelegate, sEmail:String, sContrasena:String) {
+        print("Hola " + sEmail)
+        
+        Auth.auth().signIn(withEmail: sEmail, password: sContrasena) {(email, error) in
+            if sEmail != ""{
+                self.sID = (email?.uid)!
+                let ruta = Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document((email?.uid)!)
+                
+                ruta?.getDocument { (document, error) in
+                    if document != nil{
+                        
+                        Dataholder.sharedInstance.miPerfil.setMap(valores: (document?.data())!)
+                        
+                        delegate.dataHolderLogin!(blfin: true)
+                        
+                    }
+                    else{
+                        print(error!)
+                    }
+                }
+            }
+            else{
+                print("Fallo al logearse")
+                delegate.dataHolderLogin!(blfin: false)
+            }
+        }
+    }
     func Registro(delegate:DataHolderDelegate,sEmail:String, sPass:String) {
         Auth.auth().createUser(withEmail: email, password: pass){
             (email, error)in
@@ -37,7 +65,7 @@ class Dataholder: NSObject {
                 print ("Te registraste")
                 
                 Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document((email?.uid)!).setData(["email"
-                    :self.email, "nombre":self.user, "capucha":"https://firebasestorage.googleapis.com/v0/b/kallinas-5b7a3.appspot.com/o/Personalizaci%C3%B3n%2FCapucha%2Fcaptura1.1.png?alt=media&token=8002146c-354e-499e-aff7-b602122f3cea"])
+                    :self.email, "nombre":self.user])
                 delegate.dataHolderRegister!(blfin: true)
             }
             else{
@@ -50,4 +78,5 @@ class Dataholder: NSObject {
 }
 @objc protocol DataHolderDelegate{
     @objc optional func dataHolderRegister(blfin:Bool)
+    @objc optional func dataHolderLogin(blfin:Bool)
 }

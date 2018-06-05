@@ -16,6 +16,7 @@
 		3373D5E820BD6BDE002A2A35 /* Kallinas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3373D5E620BD6BDE002A2A35 /* Kallinas.xcdatamodeld */; };
 		3373D5EA20BD6BE0002A2A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3373D5E920BD6BE0002A2A35 /* Assets.xcassets */; };
 		3373D5ED20BD6BE0002A2A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3373D5EB20BD6BE0002A2A35 /* LaunchScreen.storyboard */; };
+		338CB0F920C6ADB4004885DE /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338CB0F820C6ADB4004885DE /* Perfil.swift */; };
 		8D0D187EC736330367B2BF8C /* Pods_Kallinas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99269A1B0D07F75F23927B95 /* Pods_Kallinas.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		3373D5E920BD6BE0002A2A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3373D5EC20BD6BE0002A2A35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3373D5EE20BD6BE0002A2A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338CB0F820C6ADB4004885DE /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
 		99269A1B0D07F75F23927B95 /* Pods_Kallinas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kallinas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D5679118D7FBD49B4E911F5 /* Pods-Kallinas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kallinas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kallinas/Pods-Kallinas.release.xcconfig"; sourceTree = "<group>"; };
 		B8AC3D9B95164D17C6FFACEA /* Pods-Kallinas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kallinas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kallinas/Pods-Kallinas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				3373D5E620BD6BDE002A2A35 /* Kallinas.xcdatamodeld */,
 				3333362320C154D60004FA04 /* DataHolder.swift */,
 				3333362520C15D7B0004FA04 /* VCRegisterView.swift */,
+				338CB0F820C6ADB4004885DE /* Perfil.swift */,
 			);
 			path = Kallinas;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				3373D5E820BD6BDE002A2A35 /* Kallinas.xcdatamodeld in Sources */,
 				3373D5E220BD6BDE002A2A35 /* ViewController.swift in Sources */,
 				3373D5E020BD6BDE002A2A35 /* AppDelegate.swift in Sources */,
+				338CB0F920C6ADB4004885DE /* Perfil.swift in Sources */,
 				3333362420C154D60004FA04 /* DataHolder.swift in Sources */,
 				3333362620C15D7B0004FA04 /* VCRegisterView.swift in Sources */,
 			);
