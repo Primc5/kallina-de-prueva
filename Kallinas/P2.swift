@@ -64,6 +64,8 @@ class P2: UIViewController, DataHolderDelegate {
     }
     
     @IBAction func end(_ sender: Any){
+        print(def2)
+        print(atk2)
         if(def2 != nil || atk2 != nil){
             Dataholder.sharedInstance.guardarp2(atk2: atk2!, def2: def2!, delegate: self)
             self.performSegue(withIdentifier: "trbatalla", sender: self)

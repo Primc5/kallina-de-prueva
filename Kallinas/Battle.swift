@@ -16,7 +16,7 @@ class Battle: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+self.btnNext?.setTitle("SEE RESULTS", for: .normal)
         // Do any additional setup after loading the view.
     }
 

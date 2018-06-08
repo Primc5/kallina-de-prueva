@@ -138,15 +138,13 @@ class Dataholder: NSObject {
     func guardarp1(atk:Int, def:Int, delegate:DataHolderDelegate){
         p1atk = atk
         p1def = def
-        print(p1atk)
-        print(p1def)
+
     }
     
     func guardarp2(atk2:Int, def2:Int, delegate:DataHolderDelegate){
         p2atk = atk2
         p2def = def2
-        print(p1atk)
-        print(p1def)
+
     }
     
 }
