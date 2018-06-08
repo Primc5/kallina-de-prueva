@@ -33,16 +33,17 @@ class ViewController: UIViewController, DataHolderDelegate {
     func dataHolderLogin(blfin: Bool) {
         if blfin==true{
             print(open)
-            open = open + 1
+            
         }
     }
     var open:Int = 0
     @IBAction func entrar(){
-        print(open)
+        if(Dataholder.sharedInstance.user != ""){
+            open = 1
+        }
         if(open > 0){
             self.performSegue(withIdentifier: "transitionLogin", sender: self)
         }
     }
-
 }
 
