@@ -196,7 +196,6 @@
                                 </state>
                                 <connections>
                                     <action selector="end:" destination="Cjk-kl-2o2" eventType="touchUpInside" id="S3p-sX-NNh"/>
-                                    <segue destination="I7a-ED-Xs7" kind="show" id="8AZ-Lf-3Rv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w4C-MM-zjP">
@@ -298,6 +297,7 @@
                         <outlet property="btnAttack" destination="w4C-MM-zjP" id="dH7-Il-oH1"/>
                         <outlet property="btnDefence" destination="JSR-4G-ah3" id="UxG-ht-eq4"/>
                         <outlet property="btnEnd" destination="ffg-hQ-jDT" id="abY-1E-mV1"/>
+                        <segue destination="I7a-ED-Xs7" kind="show" identifier="transitionp2" id="eCt-sp-gRB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Da0-ZF-NCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -329,6 +329,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
+                                    <action selector="end:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="u8I-iN-651"/>
                                     <segue destination="GZf-s5-VBi" kind="show" id="Vh7-u6-XhF"/>
                                 </connections>
                             </button>
@@ -431,6 +432,7 @@
                         <outlet property="btnEnd2" destination="oet-dU-4Ig" id="ZW0-ef-GXh"/>
                         <outlet property="btnMid2" destination="Mv5-I6-mHL" id="EHn-db-r8s"/>
                         <outlet property="btnTop2" destination="gxt-R4-YnL" id="xrQ-lN-IcZ"/>
+                        <segue destination="GZf-s5-VBi" kind="show" identifier="trbatalla" id="OUR-Dr-q0l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbQ-rO-Yf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -718,6 +720,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="OUR-Dr-q0l"/>
         <segue reference="7et-eR-4s8"/>
         <segue reference="GZr-hi-6vh"/>
     </inferredMetricsTieBreakers>

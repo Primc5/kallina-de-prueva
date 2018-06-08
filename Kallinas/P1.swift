@@ -8,7 +8,7 @@
 
 import UIKit
 
-class P1: UIViewController {
+class P1: UIViewController, DataHolderDelegate {
     @IBOutlet var btnAttack:UIButton?
     @IBOutlet var btnDefence:UIButton?
     @IBOutlet var btnEnd:UIButton?
@@ -67,7 +67,8 @@ class P1: UIViewController {
     
     @IBAction func end(_ sender: Any){
         if(def != nil || atk != nil){
-            
+            Dataholder.sharedInstance.guardarp1(atk: atk!, def: def!, delegate: self)
+            self.performSegue(withIdentifier: "transitionp2", sender: self)
         }
     }
 
