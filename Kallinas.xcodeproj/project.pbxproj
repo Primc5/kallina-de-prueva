@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3310E3EC20CA92F300229125 /* P1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3310E3EB20CA92F300229125 /* P1.swift */; };
 		3333362420C154D60004FA04 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333362320C154D60004FA04 /* DataHolder.swift */; };
 		3333362620C15D7B0004FA04 /* VCRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333362520C15D7B0004FA04 /* VCRegisterView.swift */; };
 		3333362820C169A60004FA04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3333362720C169A60004FA04 /* GoogleService-Info.plist */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3310E3EB20CA92F300229125 /* P1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1.swift; sourceTree = "<group>"; };
 		3333362320C154D60004FA04 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		3333362520C15D7B0004FA04 /* VCRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegisterView.swift; sourceTree = "<group>"; };
 		3333362720C169A60004FA04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				3373D5E620BD6BDE002A2A35 /* Kallinas.xcdatamodeld */,
 				3333362320C154D60004FA04 /* DataHolder.swift */,
 				3333362520C15D7B0004FA04 /* VCRegisterView.swift */,
+				3310E3EB20CA92F300229125 /* P1.swift */,
 				338CB0F820C6ADB4004885DE /* Perfil.swift */,
 				6F2E53BF20CA87EE0009E299 /* Capuchas.swift */,
 				6F2E53C120CA8CB40009E299 /* TVCCelula.swift */,
@@ -258,6 +261,7 @@
 			files = (
 				6F2E53C020CA87EE0009E299 /* Capuchas.swift in Sources */,
 				3373D5E820BD6BDE002A2A35 /* Kallinas.xcdatamodeld in Sources */,
+				3310E3EC20CA92F300229125 /* P1.swift in Sources */,
 				3373D5E220BD6BDE002A2A35 /* ViewController.swift in Sources */,
 				3373D5E020BD6BDE002A2A35 /* AppDelegate.swift in Sources */,
 				338CB0F920C6ADB4004885DE /* Perfil.swift in Sources */,

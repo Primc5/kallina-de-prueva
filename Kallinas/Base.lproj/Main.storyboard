@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cjk-kl-2o2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="30" y="-734"/>
         </scene>
-        <!--View Controller-->
+        <!--P1-->
         <scene sceneID="bPH-Rh-H64">
             <objects>
-                <viewController id="Cjk-kl-2o2" sceneMemberID="viewController">
+                <viewController id="Cjk-kl-2o2" customClass="P1" customModule="Kallinas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KEm-yF-wwS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,6 +188,10 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="btnAttack:" destination="bau-iG-1lf" eventType="touchUpInside" id="l4t-PY-HYF"/>
+                                    <action selector="clcikAttack:" destination="Cjk-kl-2o2" eventType="touchUpInside" id="GAL-eE-YjX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JSR-4G-ah3">
                                 <rect key="frame" x="16" y="76" width="138" height="36"/>
@@ -205,6 +209,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="clickDefence:" destination="Cjk-kl-2o2" eventType="touchUpInside" id="SL8-XJ-WJB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FKk-3G-F2I">
                                 <rect key="frame" x="265" y="611" width="94" height="36"/>
@@ -249,8 +256,15 @@
                         <color key="backgroundColor" red="0.47350497899999999" green="0.55687645070000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6hQ-Hg-bke"/>
                     </view>
+                    <connections>
+                        <outlet property="btnAttack" destination="w4C-MM-zjP" id="dH7-Il-oH1"/>
+                        <outlet property="btnDefence" destination="JSR-4G-ah3" id="UxG-ht-eq4"/>
+                        <outlet property="btnEnd" destination="ffg-hQ-jDT" id="abY-1E-mV1"/>
+                        <outlet property="clickAttack" destination="w4C-MM-zjP" id="NIz-fG-qmG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Da0-ZF-NCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bau-iG-1lf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1062" y="187"/>
         </scene>
@@ -552,7 +566,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xj4-A1-3NY"/>
-        <segue reference="GZr-hi-6vh"/>
+        <segue reference="W5R-ny-iVc"/>
     </inferredMetricsTieBreakers>
 </document>
