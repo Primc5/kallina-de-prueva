@@ -13,7 +13,7 @@ class Dataholder: NSObject {
     static let sharedInstance:Dataholder = Dataholder()
     
     var fireStoreDB:Firestore?
-    var firStorage:Storage?
+    var firStorageRef:StorageReference?
     
     var miPerfil:Perfil = Perfil()
     var user:String = ""
@@ -21,11 +21,17 @@ class Dataholder: NSObject {
     var pass:String = ""
     var repass:String = ""
     
+    var fireStorage:Storage?
+    var HMIMG :[String: UIImage]?=[:]
+    var arCapuchas:[Capuchas] = []
+    
     
     func initFirebase(){
         FirebaseApp.configure()
         fireStoreDB = Firestore.firestore()
-        firStorage = Storage.storage()
+        fireStorage = Storage.storage()
+        firStorageRef = fireStorage?.reference()
+
     }
     var sID:String = ""
     func Login(delegate:DataHolderDelegate, sEmail:String, sContrasena:String) {
@@ -74,9 +80,58 @@ class Dataholder: NSObject {
             }
         }
     }
-
+    
+    func descargarCiudades(delegate:DataHolderDelegate){
+        
+        Dataholder.sharedInstance.fireStoreDB?.collection("Capuchas").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                delegate.DHDDescargaCiudadesCompleta!(blnFin: false)
+            } else {
+                self.arCapuchas=[]
+                for document in querySnapshot!.documents {
+                    let capucha:Capuchas = Capuchas()
+                    capucha.sID=document.documentID
+                    capucha.setMap(valores: document.data())
+                    self.arCapuchas.append(capucha)
+                    print("\(document.documentID) => \(document.data())")
+                }
+                print("----->>>> ",self.arCapuchas.count)
+                delegate.DHDDescargaCiudadesCompleta!(blnFin: true)
+            }
+            //self.tbMiTabla?.reloadData()
+        }
+        
+    }
+    
+    func executeimagen(clave:String, delegate:DataHolderDelegate){
+        if self.HMIMG![clave] == nil{
+            let gsReference = self.fireStorage?.reference(forURL: clave)
+            gsReference?.getData(maxSize: 1 * 1024 * 1024, completion: { (data, error) in
+                if error != nil {
+                    print(error!)
+                }
+                else{
+                    let imgDescargada = UIImage(data: data!)
+                    self.HMIMG?[clave] = imgDescargada
+                    delegate.imagen!(imagen: imgDescargada!)
+                    
+                }
+            }
+            )
+            
+        }
+        else{
+            delegate.imagen!(imagen:self.HMIMG![clave]!)
+        }
+        print("llego")
+        
+    }
+    
 }
 @objc protocol DataHolderDelegate{
     @objc optional func dataHolderRegister(blfin:Bool)
     @objc optional func dataHolderLogin(blfin:Bool)
+    @objc optional func DHDDescargaCiudadesCompleta(blnFin:Bool)
+    @objc optional func imagen(imagen:UIImage)
 }

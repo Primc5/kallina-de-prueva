@@ -15,8 +15,6 @@ class Perfil: NSObject {
     var sNombre:String?
     var sEmail:String?
     var sRutaimagen:String?
-    var bLat = ""
-    var bLong = ""
     
     
     func setMap(valores:[String:Any]) {
@@ -24,9 +22,6 @@ class Perfil: NSObject {
         sEmail = valores["email"] as? String
         sRutaimagen = valores["RutaImagen"] as? String
         
-        if sRutaimagen == nil{
-            sRutaimagen = "no se ha encontrado imagen"
-        }
         print("Nombre: ",sNombre)
         print("Email: ",sEmail)
         print("Enlace imagen: ",sRutaimagen)
