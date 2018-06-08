@@ -304,10 +304,10 @@
             </objects>
             <point key="canvasLocation" x="1062" y="187"/>
         </scene>
-        <!--View Controller-->
+        <!--P2-->
         <scene sceneID="cUz-p4-2oW">
             <objects>
-                <viewController id="I7a-ED-Xs7" sceneMemberID="viewController">
+                <viewController id="I7a-ED-Xs7" customClass="P2" customModule="Kallinas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HIi-ID-GMp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,6 +348,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="clickAttack2With_sender:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="aY5-9J-BPu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6PG-wZ-4Eb">
                                 <rect key="frame" x="16" y="76" width="138" height="36"/>
@@ -365,6 +368,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="clickDefence2With_sender:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="pTx-1t-C2z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FCJ-bx-iKU">
                                 <rect key="frame" x="265" y="611" width="94" height="36"/>
@@ -390,16 +396,25 @@
                                 <rect key="frame" x="174" y="168" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clickTop2With_sender:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="P6z-Nv-EWM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv5-I6-mHL">
                                 <rect key="frame" x="174" y="272" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clickMid2With_sender:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="SLr-Bt-fRG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1i-YZ-i0P">
                                 <rect key="frame" x="174" y="449" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clickBot2With_sender:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="4cI-1Y-v7P"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bx4-ZG-PNr">
                                 <rect key="frame" x="16" y="120" width="343" height="483"/>
@@ -409,6 +424,14 @@
                         <color key="backgroundColor" red="1" green="0.49620437545714285" blue="0.38613255700000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="RO5-T0-NKc"/>
                     </view>
+                    <connections>
+                        <outlet property="btnAttack2" destination="QFK-hB-QSY" id="xdQ-GN-2aD"/>
+                        <outlet property="btnBot2" destination="w1i-YZ-i0P" id="3uk-o9-HgZ"/>
+                        <outlet property="btnDefence2" destination="6PG-wZ-4Eb" id="fd7-Xl-QXs"/>
+                        <outlet property="btnEnd2" destination="oet-dU-4Ig" id="ZW0-ef-GXh"/>
+                        <outlet property="btnMid2" destination="Mv5-I6-mHL" id="EHn-db-r8s"/>
+                        <outlet property="btnTop2" destination="gxt-R4-YnL" id="xrQ-lN-IcZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbQ-rO-Yf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -696,6 +719,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="7et-eR-4s8"/>
-        <segue reference="W5R-ny-iVc"/>
+        <segue reference="GZr-hi-6vh"/>
     </inferredMetricsTieBreakers>
 </document>
