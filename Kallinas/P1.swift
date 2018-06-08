@@ -12,6 +12,11 @@ class P1: UIViewController {
     @IBOutlet var btnAttack:UIButton?
     @IBOutlet var btnDefence:UIButton?
     @IBOutlet var btnEnd:UIButton?
+    
+    @IBOutlet var Top:UIButton?
+    @IBOutlet var Mid:UIButton?
+    @IBOutlet var Bot:UIButton?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -23,15 +28,48 @@ class P1: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    var mode:Int = 0
     @IBAction func clickAttack(_ sender: Any) {
-        btnDefence?.isEnabled = false
-        btnDefence?.adjustsImageWhenHighlighted = false
+        mode = 0
     }
     
     @IBAction func clickDefence(_ sender: Any) {
+        mode = 1
     }
     
+    var atk:Int?
+    var def:Int?
+    
+    @IBAction func clickTop(_ sender: Any){
+        if(mode == 1){
+            def = 1
+        }
+        else if(mode == 0){
+            atk = 1
+        }
+    }
+    @IBAction func clickMid(_ sender: Any){
+        if(mode == 1){
+            def = 2
+        }
+        else if(mode == 0){
+            atk = 2
+        }
+    }
+    @IBAction func clickBot(_ sender: Any){
+        if(mode == 1){
+            def = 3
+        }
+        else if(mode == 0){
+            atk = 3
+        }
+    }
+    
+    @IBAction func end(_ sender: Any){
+        if(def != nil || atk != nil){
+            
+        }
+    }
 
     /*
     // MARK: - Navigation
