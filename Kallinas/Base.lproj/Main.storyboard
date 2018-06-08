@@ -625,10 +625,10 @@
             </objects>
             <point key="canvasLocation" x="1061.5999999999999" y="-734.48275862068976"/>
         </scene>
-        <!--View Controller-->
+        <!--Battle-->
         <scene sceneID="0P7-Ab-Pym">
             <objects>
-                <viewController id="GZf-s5-VBi" sceneMemberID="viewController">
+                <viewController id="GZf-s5-VBi" customClass="Battle" customModule="Kallinas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RCI-cD-NZY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -690,13 +690,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1fM-6V-kcO">
-                                <rect key="frame" x="140" y="523" width="94" height="36"/>
+                                <rect key="frame" x="138" y="523" width="99" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="NEXT TURN">
+                                        <fragment content="SEE RESULTS">
                                             <attributes>
                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <font key="NSFont" size="15" name="Futura-Bold"/>
@@ -706,22 +706,32 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="Cjk-kl-2o2" kind="show" id="15V-NQ-Yn6"/>
+                                    <action selector="next:" destination="GZf-s5-VBi" eventType="touchUpInside" id="42K-tl-DpA"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cII-1p-Z8U">
+                                <rect key="frame" x="16" y="20" width="343" height="485"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.71137444277142858" green="0.52632903327428571" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Pnj-Fp-qjQ"/>
                     </view>
+                    <connections>
+                        <outlet property="P1HP" destination="zhG-NL-kgU" id="WRI-eV-Hlc"/>
+                        <outlet property="P2HP" destination="d5q-HD-pvb" id="F5b-GO-TAz"/>
+                        <outlet property="btnNext" destination="1fM-6V-kcO" id="tUC-wx-RMl"/>
+                        <segue destination="Cjk-kl-2o2" kind="show" identifier="reset" id="Iyk-Ea-iPJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqJ-cH-4MS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3164" y="186.65667166416793"/>
+            <point key="canvasLocation" x="3228" y="186.65667166416793"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="OUR-Dr-q0l"/>
-        <segue reference="7et-eR-4s8"/>
-        <segue reference="GZr-hi-6vh"/>
+        <segue reference="Iyk-Ea-iPJ"/>
+        <segue reference="cwX-u2-45I"/>
     </inferredMetricsTieBreakers>
 </document>

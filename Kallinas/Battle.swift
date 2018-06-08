@@ -9,7 +9,11 @@
 import UIKit
 
 class Battle: UIViewController {
-
+    @IBOutlet var P1HP:UITextField?
+    @IBOutlet var P2HP:UITextField?
+    
+    @IBOutlet var btnNext:UIButton?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,8 +24,19 @@ class Battle: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+ 
+    var open:Int = 0
+    @IBAction func next(_ sender: Any){
+        if(open == 0){
+            self.btnNext?.setTitle("NEXT", for: .normal)
+            open = 1
+        }
+        else{
+            self.performSegue(withIdentifier: "reset", sender: self)
+        }
+    }
     
-
+    
     /*
     // MARK: - Navigation
 

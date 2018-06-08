@@ -29,7 +29,8 @@ class Dataholder: NSObject {
     var p1def:Int?
     var p2atk:Int?
     var p2def:Int?
-    
+    var hp1:Int?
+    var hp2:Int?
     
     func initFirebase(){
         FirebaseApp.configure()
@@ -86,7 +87,7 @@ class Dataholder: NSObject {
         }
     }
     
-    func descargarCiudades(delegate:DataHolderDelegate){
+    func descargarCapuchas(delegate:DataHolderDelegate){
         
         Dataholder.sharedInstance.fireStoreDB?.collection("Capuchas").getDocuments() { (querySnapshot, err) in
             if let err = err {
