@@ -11,12 +11,15 @@ import UIKit
 class ViewController: UIViewController, DataHolderDelegate {
     
     @IBOutlet var LOGIN:UIButton?
+    @IBOutlet var PLAY:UIButton?
+    @IBOutlet var Custom:UIButton?
     
     @IBOutlet var user: UITextField?
     @IBOutlet var pass: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Custom?.isEnabled = false
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -27,23 +30,16 @@ class ViewController: UIViewController, DataHolderDelegate {
     
     @IBAction func cliclogevent(){
         Dataholder.sharedInstance.Login(delegate: self, sEmail: (user?.text)!, sContrasena: (pass?.text)!)
-        
     }
 
     func dataHolderLogin(blfin: Bool) {
         if blfin==true{
-            print(open)
-            
+            Custom?.isEnabled = true
         }
     }
-    var open:Int = 0
+
     @IBAction func entrar(){
-        if(Dataholder.sharedInstance.user != ""){
-            open = 1
-        }
-        if(open > 0){
-            self.performSegue(withIdentifier: "transitionLogin", sender: self)
-        }
+        self.performSegue(withIdentifier: "transitionLogin", sender: self)
     }
 }
 
