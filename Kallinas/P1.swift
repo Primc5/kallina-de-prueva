@@ -15,7 +15,7 @@ class P1: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        btnEnd?.isEnabled = false
+       // btnEnd?.isEnabled = false
         // Do any additional setup after loading the view.
     }
 
