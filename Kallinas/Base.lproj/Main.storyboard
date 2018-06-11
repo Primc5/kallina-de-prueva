@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7a-ED-Xs7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -434,25 +434,34 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxt-R4-YnL">
                                 <rect key="frame" x="174" y="168" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="clickTop2With_sender:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="P6z-Nv-EWM"/>
+                                    <outletCollection property="gestureRecognizers" destination="x1D-UW-aAO" appends="YES" id="2C7-kC-sbY"/>
+                                    <outletCollection property="gestureRecognizers" destination="19r-KK-MUS" appends="YES" id="Xmk-aN-O0Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv5-I6-mHL">
                                 <rect key="frame" x="174" y="272" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="clickMid2With_sender:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="SLr-Bt-fRG"/>
+                                    <outletCollection property="gestureRecognizers" destination="jnN-O6-JIW" appends="YES" id="YwT-WI-ujw"/>
+                                    <outletCollection property="gestureRecognizers" destination="m61-Ym-9n7" appends="YES" id="J2T-2x-Lf5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1i-YZ-i0P">
                                 <rect key="frame" x="174" y="449" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="clickBot2With_sender:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="4cI-1Y-v7P"/>
+                                    <outletCollection property="gestureRecognizers" destination="W7U-c4-3to" appends="YES" id="ahZ-15-8JU"/>
+                                    <outletCollection property="gestureRecognizers" destination="hB1-HE-JEx" appends="YES" id="RXR-DH-4l3"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bx4-ZG-PNr">
@@ -474,6 +483,36 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbQ-rO-Yf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="x1D-UW-aAO">
+                    <connections>
+                        <action selector="normalTap:" destination="I7a-ED-Xs7" id="7rf-BA-ePA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="19r-KK-MUS">
+                    <connections>
+                        <action selector="longTap:" destination="I7a-ED-Xs7" id="05u-dM-7oB"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="jnN-O6-JIW">
+                    <connections>
+                        <action selector="normalTap2:" destination="I7a-ED-Xs7" id="mSO-LI-vy6"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="m61-Ym-9n7">
+                    <connections>
+                        <action selector="longTap2:" destination="I7a-ED-Xs7" id="Xrt-tf-Vii"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="W7U-c4-3to">
+                    <connections>
+                        <action selector="normalTap3:" destination="I7a-ED-Xs7" id="vDO-Vl-hVe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="hB1-HE-JEx">
+                    <connections>
+                        <action selector="longTap3:" destination="I7a-ED-Xs7" id="3uQ-YT-Gqo"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2086" y="187"/>
         </scene>

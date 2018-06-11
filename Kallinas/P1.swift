@@ -42,10 +42,10 @@ class P1: UIViewController, DataHolderDelegate {
         //----------
         let tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(normalTap3(_:)))
         tapGesture.numberOfTapsRequired = 1
-        Mid?.addGestureRecognizer(tapGesture)
+        Bot?.addGestureRecognizer(tapGesture)
         
         let longGesture3 = UILongPressGestureRecognizer(target: self, action: #selector(longTap3(_:)))
-        Mid?.addGestureRecognizer(longGesture)
+        Bot?.addGestureRecognizer(longGesture)
         
         // Dispose of any resources that can be recreated.
     }
