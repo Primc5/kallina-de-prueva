@@ -20,7 +20,7 @@ class P1: UIViewController, DataHolderDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        atk1 = -1
+        atkAuxiliar = -1
        // btnEnd?.isEnabled = false
         // Do any additional setup after loading the view.
     }
@@ -51,24 +51,39 @@ class P1: UIViewController, DataHolderDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    /*
+     NORMAL TAP:
+     -----------------------
+     La variable atkAuxiliar se inicializa a -1 para que entre directamente en el else if si se selecciona ataque.
+    Dependiendo de donde des  (arriba es 1 , medio es 2, abajo es 3) pone la variable auxiliar a 1 2 o 3.
+    Despues de esto,realizarun segundo ataque. Como la variable auxiliar esta ya a 1,2 o 3, entra en el else y cambia la variable principal a 1 2 o 3 dependiendo de donde des.
+     -----------------------
+     
+     
+     LONG TAP:
+     -----------------------
+     Al darle un ataque con long tap, simplemente se cambia la variable principal a 1 2 o 3 dependioendo de la zona
+     y la auxiliar a -1 (para poder cambiar de opinion y hacer normal taps si quieres). Luego el dataholder percibe el -1 como un long tap (un heavy attack).
+    -----------------------
+     
+    */
     @IBAction func normalTap(_ sender: UIGestureRecognizer){
         print("Normal tap")
         if(mode == 1){
             def = 1
         }
-        else if(mode == 0 && atk1 == -1){
-            atk1 = 1
+        else if(mode == 0 && atkAuxiliar == -1){
+            atkAuxiliar = 1
         }
         else{
-            atk = 1
+            atkPrincipal = 1
         }
     }
     @IBAction func longTap(_ sender: UIGestureRecognizer){
         print("Long tap")
         if sender.state == .ended {
-            atk = 1
-            atk1 = -1
+            atkPrincipal = 1
+            atkAuxiliar = -1
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
         }
@@ -83,19 +98,19 @@ class P1: UIViewController, DataHolderDelegate {
         if(mode == 1){
             def = 2
         }
-        else if(mode == 0 && atk1 == -1){
-            atk1 = 2
+        else if(mode == 0 && atkAuxiliar == -1){
+            atkAuxiliar = 2
         }
         else{
-            atk = 2
+            atkPrincipal = 2
         }
     }
     
     @IBAction func longTap2(_ sender: UIGestureRecognizer){
         print("Long tap")
         if sender.state == .ended {
-            atk = 2
-            atk1 = -1
+            atkPrincipal = 2
+            atkAuxiliar = -1
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
         }
@@ -110,19 +125,19 @@ class P1: UIViewController, DataHolderDelegate {
         if(mode == 1){
             def = 3
         }
-        else if(mode == 0 && atk1 == -1){
-            atk1 = 3
+        else if(mode == 0 && atkAuxiliar == -1){
+            atkAuxiliar = 3
         }
         else{
-            atk = 3
+            atkPrincipal = 3
         }
     }
     
     @IBAction func longTap3(_ sender: UIGestureRecognizer){
         print("Long tap")
         if sender.state == .ended {
-            atk = 3
-            atk1 = -1
+            atkPrincipal = 3
+            atkAuxiliar = -1
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
         }
@@ -140,14 +155,14 @@ class P1: UIViewController, DataHolderDelegate {
         mode = 1
     }
     
-    var atk:Int?
-    var atk1:Int?
+    var atkPrincipal:Int?
+    var atkAuxiliar:Int?
     var def:Int?
     
     
     @IBAction func end(_ sender: Any){
-        if(def != nil || atk != nil){
-            Dataholder.sharedInstance.guardarp1(atk: atk!, atk1: atk1!, def: def!, delegate: self)
+        if(def != nil || atkPrincipal != nil){
+            Dataholder.sharedInstance.guardarp1(atk: atkPrincipal!, atk1: atkAuxiliar!, def: def!, delegate: self)
             self.performSegue(withIdentifier: "transitionp2", sender: self)
         }
     }
