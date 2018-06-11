@@ -26,8 +26,10 @@ class Dataholder: NSObject {
     var arCapuchas:[Capuchas] = []
     
     var p1atk:Int?
+    var p1atk1:Int?
     var p1def:Int?
     var p2atk:Int?
+    var p2ark1:Int?
     var p2def:Int?
     var hp1:Int?
     var hp2:Int?
@@ -138,9 +140,13 @@ class Dataholder: NSObject {
     }
     
     
-    func guardarp1(atk:Int, def:Int, delegate:DataHolderDelegate){
+    func guardarp1(atk:Int, atk1:Int, def:Int, delegate:DataHolderDelegate){
         p1atk = atk
+        p1atk1 = atk1
         p1def = def
+        if(p1atk == -1){
+            
+        }
 
     }
     

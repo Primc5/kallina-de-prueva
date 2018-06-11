@@ -53,11 +53,21 @@ class P1: UIViewController, DataHolderDelegate {
     
     @IBAction func normalTap(_ sender: UIGestureRecognizer){
         print("Normal tap")
+        if(mode == 1){
+            def = 1
+        }
+        else if(mode == 0 && atk1 != -1){
+            atk1 = 1
+        }
+        else{
+            atk = 1
+        }
     }
-    
     @IBAction func longTap(_ sender: UIGestureRecognizer){
         print("Long tap")
         if sender.state == .ended {
+            atk = 1
+            atk1 = -1
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
         }
@@ -69,11 +79,22 @@ class P1: UIViewController, DataHolderDelegate {
     //------------------
     @IBAction func normalTap2(_ sender: UIGestureRecognizer){
         print("Normal tap")
+        if(mode == 1){
+            def = 2
+        }
+        else if(mode == 0 && atk1 != -1){
+            atk1 = 2
+        }
+        else{
+            atk = 2
+        }
     }
     
     @IBAction func longTap2(_ sender: UIGestureRecognizer){
         print("Long tap")
         if sender.state == .ended {
+            atk = 2
+            atk1 = -1
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
         }
@@ -85,11 +106,22 @@ class P1: UIViewController, DataHolderDelegate {
     //--------------
     @IBAction func normalTap3(_ sender: UIGestureRecognizer){
         print("Normal tap")
+        if(mode == 1){
+            def = 3
+        }
+        else if(mode == 0 && atk1 != -1){
+            atk1 = 3
+        }
+        else{
+            atk = 3
+        }
     }
     
     @IBAction func longTap3(_ sender: UIGestureRecognizer){
         print("Long tap")
         if sender.state == .ended {
+            atk = 3
+            atk1 = -1
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
         }
@@ -108,37 +140,23 @@ class P1: UIViewController, DataHolderDelegate {
     }
     
     var atk:Int?
-    var atk2:Int?
+    var atk1:Int = -1
     var def:Int?
     
     @IBAction func clickTop(_ sender: Any){
-        if(mode == 1){
-            def = 1
-        }
-        else if(mode == 0){
-            atk = 1
-        }
+
+
     }
     @IBAction func clickMid(_ sender: Any){
-        if(mode == 1){
-            def = 2
-        }
-        else if(mode == 0){
-            atk = 2
-        }
+
     }
     @IBAction func clickBot(_ sender: Any){
-        if(mode == 1){
-            def = 3
-        }
-        else if(mode == 0){
-            atk = 3
-        }
+
     }
     
     @IBAction func end(_ sender: Any){
         if(def != nil || atk != nil){
-            Dataholder.sharedInstance.guardarp1(atk: atk!, def: def!, delegate: self)
+            Dataholder.sharedInstance.guardarp1(atk: atk!, atk1: atk1, def: def!, delegate: self)
             self.performSegue(withIdentifier: "transitionp2", sender: self)
         }
     }
