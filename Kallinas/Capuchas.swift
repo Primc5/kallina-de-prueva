@@ -23,7 +23,6 @@ class Capuchas: NSObject {
     
     func getMap() -> [String:Any] {
         return[
-            IDnombre: sNombre as Any,
-        ]
+            IDnombre: sNombre as Any        ]
     }
 }

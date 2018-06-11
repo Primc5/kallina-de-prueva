@@ -603,10 +603,10 @@
             </objects>
             <point key="canvasLocation" x="30" y="187"/>
         </scene>
-        <!--View Controller-->
+        <!--Custom-->
         <scene sceneID="cJu-9V-t0b">
             <objects>
-                <viewController id="fqR-7B-cTc" sceneMemberID="viewController">
+                <viewController id="fqR-7B-cTc" customClass="Custom" customModule="Kallinas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EzN-Id-kY7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -653,7 +653,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="micelda1" rowHeight="89" id="w49-NE-QaM" customClass="TVCCelula" customModule="Kallinas" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="micelda1" rowHeight="89" id="w49-NE-QaM" customClass="TVCCelula" customModule="Kallinas" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="344" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w49-NE-QaM" id="jzU-Jv-obI">
@@ -686,11 +686,18 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fqR-7B-cTc" id="1tT-Md-VXw"/>
+                                    <outlet property="delegate" destination="fqR-7B-cTc" id="noV-NF-Wno"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.47350497899999999" green="0.55687645070000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Wsq-tv-aZ9"/>
                     </view>
+                    <connections>
+                        <outlet property="tbMiTabla" destination="VFM-zQ-nEJ" id="BLX-xo-7I1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIp-Yz-xbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -795,6 +802,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="7et-eR-4s8"/>
-        <segue reference="GZr-hi-6vh"/>
+        <segue reference="2ny-cX-kQC"/>
     </inferredMetricsTieBreakers>
 </document>

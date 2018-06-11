@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class TVCCelula: UITableViewCell, DataHolderDelegate {
 
     @IBOutlet var lblNombre:UILabel?

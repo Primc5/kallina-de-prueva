@@ -19,6 +19,7 @@
 		3373D5E820BD6BDE002A2A35 /* Kallinas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3373D5E620BD6BDE002A2A35 /* Kallinas.xcdatamodeld */; };
 		3373D5EA20BD6BE0002A2A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3373D5E920BD6BE0002A2A35 /* Assets.xcassets */; };
 		3373D5ED20BD6BE0002A2A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3373D5EB20BD6BE0002A2A35 /* LaunchScreen.storyboard */; };
+		337E47E420CEBFAE005AADF4 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E47E320CEBFAE005AADF4 /* Custom.swift */; };
 		338CB0F920C6ADB4004885DE /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338CB0F820C6ADB4004885DE /* Perfil.swift */; };
 		6F2E53C020CA87EE0009E299 /* Capuchas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E53BF20CA87EE0009E299 /* Capuchas.swift */; };
 		6F2E53C220CA8CB40009E299 /* TVCCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E53C120CA8CB40009E299 /* TVCCelula.swift */; };
@@ -40,6 +41,7 @@
 		3373D5E920BD6BE0002A2A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3373D5EC20BD6BE0002A2A35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3373D5EE20BD6BE0002A2A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		337E47E320CEBFAE005AADF4 /* Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
 		338CB0F820C6ADB4004885DE /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
 		6F2E53BF20CA87EE0009E299 /* Capuchas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capuchas.swift; sourceTree = "<group>"; };
 		6F2E53C120CA8CB40009E299 /* TVCCelula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCCelula.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				3333362320C154D60004FA04 /* DataHolder.swift */,
 				3333362520C15D7B0004FA04 /* VCRegisterView.swift */,
 				3310E3EB20CA92F300229125 /* P1.swift */,
+				337E47E320CEBFAE005AADF4 /* Custom.swift */,
 				331F325620CACC4000CD7407 /* P2.swift */,
 				331F325820CAD8BA00CD7407 /* Battle.swift */,
 				338CB0F820C6ADB4004885DE /* Perfil.swift */,
@@ -267,6 +270,7 @@
 			files = (
 				6F2E53C020CA87EE0009E299 /* Capuchas.swift in Sources */,
 				3373D5E820BD6BDE002A2A35 /* Kallinas.xcdatamodeld in Sources */,
+				337E47E420CEBFAE005AADF4 /* Custom.swift in Sources */,
 				3310E3EC20CA92F300229125 /* P1.swift in Sources */,
 				331F325720CACC4000CD7407 /* P2.swift in Sources */,
 				3373D5E220BD6BDE002A2A35 /* ViewController.swift in Sources */,
