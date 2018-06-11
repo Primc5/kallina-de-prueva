@@ -31,8 +31,8 @@ class Dataholder: NSObject {
     var p2atk:Int?
     var p2atk1:Int?
     var p2def:Int?
-    var hp1:Int?
-    var hp2:Int?
+    var hp1:Double = 100
+    var hp2:Double = 100
     
     var logueado:Int = 0
     
@@ -153,14 +153,43 @@ class Dataholder: NSObject {
         p2atk = atk2
         p2atk1 = atk22
         p2def = def2
-
     }
     
     func comprobarlogueado(delegate:DataHolderDelegate) -> Int{
         return self.logueado
     }
 
-    
+    var dmg:Double = 10
+    var dmg2:Double = 10
+    func conflicto(delegate:DataHolderDelegate){
+        if(p1atk1 == -1){
+            dmg = dmg * 3
+            if(p2def != p1atk){
+                if(p1atk == 1){
+                    dmg = dmg * 0.5
+                }
+                else if(p1atk == 2){
+                    dmg = dmg * 0.2
+                }
+                hp2 = hp2 - dmg
+            }
+        }
+        //------
+        if(p2atk1 == -1){
+            dmg2 = dmg2 * 3
+            if(p1def != p2atk){
+                if(p2atk == 1){
+                    dmg2 = dmg2 * 0.5
+                }
+                else if(p2atk == 2){
+                    dmg2 = dmg2 * 0.2
+                }
+                hp1 = hp1 - dmg2
+            }
+        }
+        //-------
+        
+    }
 }
 @objc protocol DataHolderDelegate{
     @objc optional func dataHolderRegister(blfin:Bool)

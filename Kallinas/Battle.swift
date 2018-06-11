@@ -28,6 +28,7 @@ self.btnNext?.setTitle("SEE RESULTS", for: .normal)
     var open:Int = 0
     @IBAction func next(_ sender: Any){
         if(open == 0){
+            Dataholder.sharedInstance.conflicto(delegate: self)
             self.btnNext?.setTitle("NEXT", for: .normal)
             open = 1
         }
