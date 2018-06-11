@@ -265,9 +265,12 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U02-tG-Bbc">
                                 <rect key="frame" x="164" y="158" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="clickTop:" destination="Cjk-kl-2o2" eventType="touchUpInside" id="GSx-Fk-6V1"/>
+                                    <outletCollection property="gestureRecognizers" destination="c8V-pZ-fZs" appends="YES" id="kDC-yS-0Ef"/>
+                                    <outletCollection property="gestureRecognizers" destination="0CK-dS-cYx" appends="YES" id="SVw-9v-h3m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12v-J7-sI4">
@@ -301,6 +304,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Da0-ZF-NCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="c8V-pZ-fZs">
+                    <connections>
+                        <action selector="longTap:" destination="Cjk-kl-2o2" id="adK-R6-PzT"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="0CK-dS-cYx">
+                    <connections>
+                        <action selector="normalTap:" destination="Cjk-kl-2o2" id="cjh-dD-dHZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1062" y="187"/>
         </scene>

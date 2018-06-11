@@ -26,7 +26,31 @@ class P1: UIViewController, DataHolderDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(normalTap(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        Top?.addGestureRecognizer(tapGesture)
+        
+        let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap(_:)))
+        Top?.addGestureRecognizer(longGesture)
+        
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func normalTap(_ sender: UIGestureRecognizer){
+        print("Normal tap")
+    }
+    
+    @IBAction func longTap(_ sender: UIGestureRecognizer){
+        print("Long tap")
+        if sender.state == .ended {
+            print("UIGestureRecognizerStateEnded")
+            //Do Whatever You want on End of Gesture
+        }
+        else if sender.state == .began {
+            print("UIGestureRecognizerStateBegan.")
+            //Do Whatever You want on Began of Gesture
+        }
     }
     var mode:Int = 0
     @IBAction func clickAttack(_ sender: Any) {
