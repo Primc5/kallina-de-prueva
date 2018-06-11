@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Battle: UIViewController {
+class Battle: UIViewController, DataHolderDelegate {
     @IBOutlet var P1HP:UITextField?
     @IBOutlet var P2HP:UITextField?
     
@@ -26,9 +26,14 @@ self.btnNext?.setTitle("SEE RESULTS", for: .normal)
     }
  
     var open:Int = 0
+    var hp1:Double?
+    var hp2:Double?
     @IBAction func next(_ sender: Any){
         if(open == 0){
-            Dataholder.sharedInstance.conflicto(delegate: self)
+            hp1 = Dataholder.sharedInstance.conflicto(delegate: self)
+            hp2 = Dataholder.sharedInstance.conflicto2(delegate: self)
+            print(hp1)
+            print(hp2)
             self.btnNext?.setTitle("NEXT", for: .normal)
             open = 1
         }

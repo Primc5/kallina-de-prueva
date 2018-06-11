@@ -161,34 +161,81 @@ class Dataholder: NSObject {
 
     var dmg:Double = 10
     var dmg2:Double = 10
-    func conflicto(delegate:DataHolderDelegate){
+    func conflicto(delegate:DataHolderDelegate) -> Double{
         if(p1atk1 == -1){
             dmg = dmg * 3
             if(p2def != p1atk){
                 if(p1atk == 1){
-                    dmg = dmg * 0.5
+                    dmg = dmg * 1.5
                 }
                 else if(p1atk == 2){
-                    dmg = dmg * 0.2
+                    dmg = dmg * 1.2
                 }
                 hp2 = hp2 - dmg
             }
         }
-        //------
+        else{
+            if(p1atk != p2def){
+                if(p1atk == 1){
+                    dmg = dmg * 1.5
+                }
+                else if(p1atk == 2){
+                    dmg = dmg * 1.2
+                }
+                hp2 = hp2 - dmg
+            }
+            dmg = 10
+            if(p1atk1 != p2def){
+                if(p1atk1 == 1){
+                    dmg = dmg * 1.5
+                }
+                else if(p1atk1 == 2){
+                    dmg = dmg * 1.2
+                }
+                hp2 = hp2 - dmg
+            }
+        }
+        dmg = 10
+
+        return hp2
+    }
+    func conflicto2 (delegate:DataHolderDelegate) -> Double{
         if(p2atk1 == -1){
             dmg2 = dmg2 * 3
             if(p1def != p2atk){
                 if(p2atk == 1){
-                    dmg2 = dmg2 * 0.5
+                    dmg2 = dmg2 * 1.5
                 }
                 else if(p2atk == 2){
-                    dmg2 = dmg2 * 0.2
+                    dmg2 = dmg2 * 1.2
                 }
                 hp1 = hp1 - dmg2
             }
         }
-        //-------
-        
+        else{
+            if(p2atk != p1def){
+                if(p2atk == 1){
+                    dmg2 = dmg2 * 1.5
+                }
+                else if(p2atk == 2){
+                    dmg2 = dmg2 * 1.2
+                }
+                hp1 = hp1 - dmg2
+            }
+            dmg2 = 10
+            if(p2atk1 != p1def){
+                if(p2atk1 == 1){
+                    dmg2 = dmg2 * 1.5
+                }
+                else if(p2atk1 == 2){
+                    dmg2 = dmg2 * 1.2
+                }
+                hp1 = hp1 - dmg2
+            }
+        }
+        dmg2 = 10
+
+        return hp1
     }
 }
 @objc protocol DataHolderDelegate{
