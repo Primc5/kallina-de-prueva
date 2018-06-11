@@ -276,17 +276,23 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12v-J7-sI4">
                                 <rect key="frame" x="164" y="262" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="clickMid:" destination="Cjk-kl-2o2" eventType="touchUpInside" id="idf-9e-rLO"/>
+                                    <outletCollection property="gestureRecognizers" destination="4v3-2f-LaR" appends="YES" id="iiQ-VD-Xxi"/>
+                                    <outletCollection property="gestureRecognizers" destination="0HA-Sz-nc9" appends="YES" id="qac-5j-2eD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9T-E2-gGq">
                                 <rect key="frame" x="164" y="439" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="clickBot:" destination="Cjk-kl-2o2" eventType="touchUpInside" id="rNP-8y-YfX"/>
+                                    <outletCollection property="gestureRecognizers" destination="lRz-5m-z9S" appends="YES" id="PF2-45-h4M"/>
+                                    <outletCollection property="gestureRecognizers" destination="xiO-wT-CQl" appends="YES" id="7E2-Gt-qaY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -312,6 +318,26 @@
                 <tapGestureRecognizer id="0CK-dS-cYx">
                     <connections>
                         <action selector="normalTap:" destination="Cjk-kl-2o2" id="cjh-dD-dHZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="4v3-2f-LaR">
+                    <connections>
+                        <action selector="normalTap2:" destination="Cjk-kl-2o2" id="dQY-fq-sjQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="0HA-Sz-nc9">
+                    <connections>
+                        <action selector="longTap2:" destination="Cjk-kl-2o2" id="Yp8-76-pmW"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="lRz-5m-z9S">
+                    <connections>
+                        <action selector="longTap3:" destination="Cjk-kl-2o2" id="Rys-JS-Nof"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="xiO-wT-CQl">
+                    <connections>
+                        <action selector="normalTap3:" destination="Cjk-kl-2o2" id="plr-DU-b36"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -736,6 +762,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="7et-eR-4s8"/>
-        <segue reference="2ny-cX-kQC"/>
+        <segue reference="W5R-ny-iVc"/>
     </inferredMetricsTieBreakers>
 </document>

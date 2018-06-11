@@ -32,6 +32,20 @@ class P1: UIViewController, DataHolderDelegate {
         
         let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap(_:)))
         Top?.addGestureRecognizer(longGesture)
+        //------
+        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(normalTap2(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        Mid?.addGestureRecognizer(tapGesture)
+        
+        let longGesture2 = UILongPressGestureRecognizer(target: self, action: #selector(longTap2(_:)))
+        Mid?.addGestureRecognizer(longGesture)
+        //----------
+        let tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(normalTap3(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        Mid?.addGestureRecognizer(tapGesture)
+        
+        let longGesture3 = UILongPressGestureRecognizer(target: self, action: #selector(longTap3(_:)))
+        Mid?.addGestureRecognizer(longGesture)
         
         // Dispose of any resources that can be recreated.
     }
@@ -52,6 +66,38 @@ class P1: UIViewController, DataHolderDelegate {
             //Do Whatever You want on Began of Gesture
         }
     }
+    //------------------
+    @IBAction func normalTap2(_ sender: UIGestureRecognizer){
+        print("Normal tap")
+    }
+    
+    @IBAction func longTap2(_ sender: UIGestureRecognizer){
+        print("Long tap")
+        if sender.state == .ended {
+            print("UIGestureRecognizerStateEnded")
+            //Do Whatever You want on End of Gesture
+        }
+        else if sender.state == .began {
+            print("UIGestureRecognizerStateBegan.")
+            //Do Whatever You want on Began of Gesture
+        }
+    }
+    //--------------
+    @IBAction func normalTap3(_ sender: UIGestureRecognizer){
+        print("Normal tap")
+    }
+    
+    @IBAction func longTap3(_ sender: UIGestureRecognizer){
+        print("Long tap")
+        if sender.state == .ended {
+            print("UIGestureRecognizerStateEnded")
+            //Do Whatever You want on End of Gesture
+        }
+        else if sender.state == .began {
+            print("UIGestureRecognizerStateBegan.")
+            //Do Whatever You want on Began of Gesture
+        }
+    }
     var mode:Int = 0
     @IBAction func clickAttack(_ sender: Any) {
         mode = 0
@@ -62,6 +108,7 @@ class P1: UIViewController, DataHolderDelegate {
     }
     
     var atk:Int?
+    var atk2:Int?
     var def:Int?
     
     @IBAction func clickTop(_ sender: Any){
