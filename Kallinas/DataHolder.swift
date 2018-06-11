@@ -144,9 +144,6 @@ class Dataholder: NSObject {
         p1atk = atk
         p1atk1 = atk1
         p1def = def
-        print(p1atk)
-        print(p1atk1)
-        print(def)
     }
     
     func guardarp2(atk2:Int, atk22:Int, def2:Int, delegate:DataHolderDelegate){

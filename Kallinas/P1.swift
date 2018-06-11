@@ -75,6 +75,10 @@ class P1: UIViewController, DataHolderDelegate {
         else if(mode == 0 && atkAuxiliar == -1){
             atkAuxiliar = 1
         }
+        else if(atkAuxiliar == 1){
+            atkAuxiliar = -1
+            atkPrincipal = 1
+        }
         else{
             atkPrincipal = 1
         }
@@ -82,8 +86,13 @@ class P1: UIViewController, DataHolderDelegate {
     @IBAction func longTap(_ sender: UIGestureRecognizer){
         print("Long tap")
         if sender.state == .ended {
-            atkPrincipal = 1
-            atkAuxiliar = -1
+            if(mode == 1){
+                def = 1
+            }
+            else{
+                atkPrincipal = 1
+                atkAuxiliar = -1
+            }
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
         }
@@ -101,6 +110,10 @@ class P1: UIViewController, DataHolderDelegate {
         else if(mode == 0 && atkAuxiliar == -1){
             atkAuxiliar = 2
         }
+        else if(atkAuxiliar == 2){
+            atkAuxiliar = -1
+            atkPrincipal = 2
+        }
         else{
             atkPrincipal = 2
         }
@@ -109,8 +122,13 @@ class P1: UIViewController, DataHolderDelegate {
     @IBAction func longTap2(_ sender: UIGestureRecognizer){
         print("Long tap")
         if sender.state == .ended {
-            atkPrincipal = 2
-            atkAuxiliar = -1
+            if(mode == 1){
+                def = 1
+            }
+            else{
+                atkPrincipal = 2
+                atkAuxiliar = -1
+            }
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
         }
@@ -128,6 +146,10 @@ class P1: UIViewController, DataHolderDelegate {
         else if(mode == 0 && atkAuxiliar == -1){
             atkAuxiliar = 3
         }
+        else if(atkAuxiliar == 3){
+            atkAuxiliar = -1
+            atkPrincipal = 3
+        }
         else{
             atkPrincipal = 3
         }
@@ -136,8 +158,13 @@ class P1: UIViewController, DataHolderDelegate {
     @IBAction func longTap3(_ sender: UIGestureRecognizer){
         print("Long tap")
         if sender.state == .ended {
-            atkPrincipal = 3
-            atkAuxiliar = -1
+            if(mode == 1){
+                def = 1
+            }
+            else{
+                atkPrincipal = 3
+                atkAuxiliar = -1
+            }
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
         }
@@ -156,13 +183,13 @@ class P1: UIViewController, DataHolderDelegate {
     }
     
     var atkPrincipal:Int?
-    var atkAuxiliar:Int?
+    var atkAuxiliar:Int = -1
     var def:Int?
     
     
     @IBAction func end(_ sender: Any){
-        if(def != nil || atkPrincipal != nil){
-            Dataholder.sharedInstance.guardarp1(atk: atkPrincipal!, atk1: atkAuxiliar!, def: def!, delegate: self)
+        if(def != nil || atkPrincipal != nil || atkAuxiliar != nil){
+            Dataholder.sharedInstance.guardarp1(atk: atkPrincipal!, atk1: atkAuxiliar, def: def!, delegate: self)
             self.performSegue(withIdentifier: "transitionp2", sender: self)
         }
     }

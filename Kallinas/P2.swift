@@ -57,6 +57,10 @@ class P2: UIViewController, DataHolderDelegate {
         else if(mode2 == 0 && atk22 == -1){
             atk22 = 1
         }
+        else if(atk22 == 1){
+            atk22 = -1
+            atk2 = 1
+        }
         else{
             atk2 = 1
         }
@@ -64,8 +68,13 @@ class P2: UIViewController, DataHolderDelegate {
     
     @IBAction func longTap(_ sender: UIGestureRecognizer){
         print("Long tap")
-        atk2 = 1
-        atk22 = -1
+        if(mode2 == 1){
+            def2 = 1
+        }
+        else{
+            atk2 = 1
+            atk22 = -1
+        }
         if sender.state == .ended {
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
@@ -84,6 +93,10 @@ class P2: UIViewController, DataHolderDelegate {
         else if(mode2 == 0 && atk22 == -1){
             atk22 = 2
         }
+        else if(atk22 == 2){
+            atk22 = -1
+            atk2 = 2
+        }
         else{
             atk2 = 2
         }
@@ -91,8 +104,13 @@ class P2: UIViewController, DataHolderDelegate {
     
     @IBAction func longTap2(_ sender: UIGestureRecognizer){
         print("Long tap")
-        atk2 = 2
-        atk22 = -1
+        if(mode2 == 1){
+            def2 = 1
+        }
+        else{
+            atk2 = 2
+            atk22 = -1
+        }
         if sender.state == .ended {
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
@@ -111,14 +129,23 @@ class P2: UIViewController, DataHolderDelegate {
     else if(mode2 == 0 && atk22 == -1){
         atk22 = 3
     }
+    else if(atk22 == 3){
+        atk22 = -1
+        atk2 = 3
+    }
     else{
         atk2 = 3
     }
     }
     @IBAction func longTap3(_ sender: UIGestureRecognizer){
         print("Long tap")
-        atk2 = 3
-        atk22 = -1
+        if(mode2 == 1){
+            def2 = 1
+        }
+        else{
+            atk2 = 3
+            atk22 = -1
+        }
         if sender.state == .ended {
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
@@ -139,13 +166,13 @@ class P2: UIViewController, DataHolderDelegate {
         mode2 = 1
     }
     var atk2: Int?
-    var atk22: Int?
+    var atk22: Int = -1
     var def2: Int?
     
     
     @IBAction func end(_ sender: Any){
-        if(def2 != nil || atk2 != nil){
-            Dataholder.sharedInstance.guardarp2(atk2: atk2!, atk22: atk22!, def2: def2!, delegate: self)
+        if(def2 != nil || atk2 != nil || atk22 != nil){
+            Dataholder.sharedInstance.guardarp2(atk2: atk2!, atk22: atk22, def2: def2!, delegate: self)
             self.performSegue(withIdentifier: "trbatalla", sender: self)
         }
     }
