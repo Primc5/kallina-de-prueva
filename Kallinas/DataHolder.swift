@@ -29,7 +29,7 @@ class Dataholder: NSObject {
     var p1atk1:Int?
     var p1def:Int?
     var p2atk:Int?
-    var p2ark1:Int?
+    var p2atk1:Int?
     var p2def:Int?
     var hp1:Int?
     var hp2:Int?
@@ -144,14 +144,14 @@ class Dataholder: NSObject {
         p1atk = atk
         p1atk1 = atk1
         p1def = def
-        if(p1atk == -1){
-            
-        }
-
+        print(p1atk)
+        print(p1atk1)
+        print(def)
     }
     
-    func guardarp2(atk2:Int, def2:Int, delegate:DataHolderDelegate){
+    func guardarp2(atk2:Int, atk22:Int, def2:Int, delegate:DataHolderDelegate){
         p2atk = atk2
+        p2atk1 = atk22
         p2def = def2
 
     }

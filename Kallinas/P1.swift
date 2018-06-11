@@ -20,6 +20,7 @@ class P1: UIViewController, DataHolderDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        atk1 = -1
        // btnEnd?.isEnabled = false
         // Do any additional setup after loading the view.
     }
@@ -56,7 +57,7 @@ class P1: UIViewController, DataHolderDelegate {
         if(mode == 1){
             def = 1
         }
-        else if(mode == 0 && atk1 != -1){
+        else if(mode == 0 && atk1 == -1){
             atk1 = 1
         }
         else{
@@ -82,7 +83,7 @@ class P1: UIViewController, DataHolderDelegate {
         if(mode == 1){
             def = 2
         }
-        else if(mode == 0 && atk1 != -1){
+        else if(mode == 0 && atk1 == -1){
             atk1 = 2
         }
         else{
@@ -109,7 +110,7 @@ class P1: UIViewController, DataHolderDelegate {
         if(mode == 1){
             def = 3
         }
-        else if(mode == 0 && atk1 != -1){
+        else if(mode == 0 && atk1 == -1){
             atk1 = 3
         }
         else{
@@ -140,23 +141,13 @@ class P1: UIViewController, DataHolderDelegate {
     }
     
     var atk:Int?
-    var atk1:Int = -1
+    var atk1:Int?
     var def:Int?
     
-    @IBAction func clickTop(_ sender: Any){
-
-
-    }
-    @IBAction func clickMid(_ sender: Any){
-
-    }
-    @IBAction func clickBot(_ sender: Any){
-
-    }
     
     @IBAction func end(_ sender: Any){
         if(def != nil || atk != nil){
-            Dataholder.sharedInstance.guardarp1(atk: atk!, atk1: atk1, def: def!, delegate: self)
+            Dataholder.sharedInstance.guardarp1(atk: atk!, atk1: atk1!, def: def!, delegate: self)
             self.performSegue(withIdentifier: "transitionp2", sender: self)
         }
     }

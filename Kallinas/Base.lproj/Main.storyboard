@@ -268,7 +268,6 @@
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="clickTop:" destination="Cjk-kl-2o2" eventType="touchUpInside" id="GSx-Fk-6V1"/>
                                     <outletCollection property="gestureRecognizers" destination="c8V-pZ-fZs" appends="YES" id="kDC-yS-0Ef"/>
                                     <outletCollection property="gestureRecognizers" destination="0CK-dS-cYx" appends="YES" id="SVw-9v-h3m"/>
                                 </connections>
@@ -279,7 +278,6 @@
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="clickMid:" destination="Cjk-kl-2o2" eventType="touchUpInside" id="idf-9e-rLO"/>
                                     <outletCollection property="gestureRecognizers" destination="4v3-2f-LaR" appends="YES" id="iiQ-VD-Xxi"/>
                                     <outletCollection property="gestureRecognizers" destination="0HA-Sz-nc9" appends="YES" id="qac-5j-2eD"/>
                                 </connections>
@@ -290,7 +288,6 @@
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="clickBot:" destination="Cjk-kl-2o2" eventType="touchUpInside" id="rNP-8y-YfX"/>
                                     <outletCollection property="gestureRecognizers" destination="lRz-5m-z9S" appends="YES" id="PF2-45-h4M"/>
                                     <outletCollection property="gestureRecognizers" destination="xiO-wT-CQl" appends="YES" id="7E2-Gt-qaY"/>
                                 </connections>
@@ -437,7 +434,6 @@
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="clickTop2With_sender:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="P6z-Nv-EWM"/>
                                     <outletCollection property="gestureRecognizers" destination="x1D-UW-aAO" appends="YES" id="2C7-kC-sbY"/>
                                     <outletCollection property="gestureRecognizers" destination="19r-KK-MUS" appends="YES" id="Xmk-aN-O0Q"/>
                                 </connections>
@@ -448,7 +444,6 @@
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="clickMid2With_sender:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="SLr-Bt-fRG"/>
                                     <outletCollection property="gestureRecognizers" destination="jnN-O6-JIW" appends="YES" id="YwT-WI-ujw"/>
                                     <outletCollection property="gestureRecognizers" destination="m61-Ym-9n7" appends="YES" id="J2T-2x-Lf5"/>
                                 </connections>
@@ -459,7 +454,6 @@
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="clickBot2With_sender:" destination="I7a-ED-Xs7" eventType="touchUpInside" id="4cI-1Y-v7P"/>
                                     <outletCollection property="gestureRecognizers" destination="W7U-c4-3to" appends="YES" id="ahZ-15-8JU"/>
                                     <outletCollection property="gestureRecognizers" destination="hB1-HE-JEx" appends="YES" id="RXR-DH-4l3"/>
                                 </connections>
@@ -801,6 +795,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="7et-eR-4s8"/>
-        <segue reference="W5R-ny-iVc"/>
+        <segue reference="GZr-hi-6vh"/>
     </inferredMetricsTieBreakers>
 </document>
