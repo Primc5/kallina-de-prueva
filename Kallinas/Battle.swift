@@ -33,7 +33,9 @@ self.btnNext?.setTitle("SEE RESULTS", for: .normal)
             hp1 = Dataholder.sharedInstance.conflicto(delegate: self)
             hp2 = Dataholder.sharedInstance.conflicto2(delegate: self)
             print(hp1)
+            P1HP?.text? = String(format:"%.2f", hp1!)
             print(hp2)
+            P2HP?.text? = String(format:"%.2f", hp2!)
             self.btnNext?.setTitle("NEXT", for: .normal)
             open = 1
         }
