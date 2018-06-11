@@ -20,6 +20,9 @@ class ViewController: UIViewController, DataHolderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         Custom?.isEnabled = false
+        if(Dataholder.sharedInstance.comprobarlogueado(delegate: self) == 1){
+            Custom?.isEnabled = true
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -38,8 +41,11 @@ class ViewController: UIViewController, DataHolderDelegate {
         }
     }
 
+    
+    
     @IBAction func entrar(){
         self.performSegue(withIdentifier: "transitionLogin", sender: self)
+        
     }
 }
 

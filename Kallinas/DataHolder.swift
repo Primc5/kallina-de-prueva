@@ -32,6 +32,8 @@ class Dataholder: NSObject {
     var hp1:Int?
     var hp2:Int?
     
+    var logueado:Int = 0
+    
     func initFirebase(){
         FirebaseApp.configure()
         fireStoreDB = Firestore.firestore()
@@ -54,6 +56,7 @@ class Dataholder: NSObject {
                         Dataholder.sharedInstance.miPerfil.setMap(valores: (document?.data())!)
                         
                         delegate.dataHolderLogin!(blfin: true)
+                        self.logueado = 1
                         
                     }
                     else{
@@ -146,6 +149,11 @@ class Dataholder: NSObject {
         p2def = def2
 
     }
+    
+    func comprobarlogueado(delegate:DataHolderDelegate) -> Int{
+        return self.logueado
+    }
+
     
 }
 @objc protocol DataHolderDelegate{
