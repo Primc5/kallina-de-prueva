@@ -14,7 +14,7 @@ class  Custom: UIViewController , UITableViewDelegate, UITableViewDataSource, Da
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+ 
         Dataholder.sharedInstance.descargarCapuchas(delegate: self)
         
         
