@@ -234,6 +234,11 @@ class Dataholder: NSObject {
 
         return hp1
     }
+    
+    func reseteo (delegate:DataHolderDelegate){
+        hp1 = 100
+        hp2 = 100
+    }
 }
 @objc protocol DataHolderDelegate{
     @objc optional func dataHolderRegister(blfin:Bool)

@@ -171,7 +171,7 @@ class P2: UIViewController, DataHolderDelegate {
     
     
     @IBAction func end(_ sender: Any){
-        if(def2 != nil || atk2 != nil || atk22 != nil){
+        if(def2 != nil && atk2 != nil && atk22 != nil){
             Dataholder.sharedInstance.guardarp2(atk2: atk2!, atk22: atk22, def2: def2!, delegate: self)
             self.performSegue(withIdentifier: "trbatalla", sender: self)
         }

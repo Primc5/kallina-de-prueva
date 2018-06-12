@@ -23,6 +23,7 @@ class ViewController: UIViewController, DataHolderDelegate {
         if(Dataholder.sharedInstance.comprobarlogueado(delegate: self) == 1){
             Custom?.isEnabled = true
         }
+        Dataholder.sharedInstance.reseteo(delegate: self)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

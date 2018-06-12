@@ -188,7 +188,7 @@ class P1: UIViewController, DataHolderDelegate {
     
     
     @IBAction func end(_ sender: Any){
-        if(def != nil || atkPrincipal != nil || atkAuxiliar != nil){
+        if(def != nil && atkPrincipal != nil && atkAuxiliar != nil){
             Dataholder.sharedInstance.guardarp1(atk: atkPrincipal!, atk1: atkAuxiliar, def: def!, delegate: self)
             self.performSegue(withIdentifier: "transitionp2", sender: self)
         }
