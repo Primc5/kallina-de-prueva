@@ -12,6 +12,8 @@ class P2: UIViewController, DataHolderDelegate {
     @IBOutlet var btnAttack2:UIButton?
     @IBOutlet var btnDefence2:UIButton?
     @IBOutlet var btnEnd2:UIButton?
+   
+    @IBOutlet var capuchaP2: UIImageView!
     
     @IBOutlet var btnTop2:UIButton?
     @IBOutlet var btnMid2:UIButton?
