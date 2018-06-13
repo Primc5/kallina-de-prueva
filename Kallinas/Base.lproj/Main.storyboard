@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="-734"/>
+            <point key="canvasLocation" x="29.600000000000001" y="-734.48275862068976"/>
         </scene>
         <!--P1-->
         <scene sceneID="bPH-Rh-H64">
@@ -258,10 +258,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="" id="W5R-ny-iVc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rCX-pR-ktr">
-                                <rect key="frame" x="16" y="120" width="343" height="483"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U02-tG-Bbc">
                                 <rect key="frame" x="164" y="158" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -273,7 +269,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12v-J7-sI4">
-                                <rect key="frame" x="164" y="262" width="46" height="30"/>
+                                <rect key="frame" x="123" y="279" width="145" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
@@ -283,7 +279,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9T-E2-gGq">
-                                <rect key="frame" x="164" y="439" width="46" height="30"/>
+                                <rect key="frame" x="123" y="428" width="152" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
@@ -292,6 +288,10 @@
                                     <outletCollection property="gestureRecognizers" destination="xiO-wT-CQl" appends="YES" id="7E2-Gt-qaY"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cuerpo1.4" translatesAutoresizingMaskIntoConstraints="NO" id="wu5-z3-4Gr">
+                                <rect key="frame" x="43" y="255" width="288" height="348"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.47350497899999999" green="0.55687645070000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6hQ-Hg-bke"/>
@@ -338,7 +338,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1062" y="187"/>
+            <point key="canvasLocation" x="1061.5999999999999" y="186.65667166416793"/>
         </scene>
         <!--P2-->
         <scene sceneID="cUz-p4-2oW">
@@ -439,7 +439,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv5-I6-mHL">
-                                <rect key="frame" x="174" y="272" width="46" height="30"/>
+                                <rect key="frame" x="110" y="270" width="171" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
@@ -449,7 +449,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1i-YZ-i0P">
-                                <rect key="frame" x="174" y="449" width="46" height="30"/>
+                                <rect key="frame" x="110" y="447" width="171" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
@@ -458,8 +458,8 @@
                                     <outletCollection property="gestureRecognizers" destination="hB1-HE-JEx" appends="YES" id="RXR-DH-4l3"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bx4-ZG-PNr">
-                                <rect key="frame" x="16" y="120" width="343" height="483"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cuerpo1.1" translatesAutoresizingMaskIntoConstraints="NO" id="bx4-ZG-PNr">
+                                <rect key="frame" x="43" y="255" width="288" height="348"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -508,7 +508,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2086" y="187"/>
+            <point key="canvasLocation" x="2085.5999999999999" y="186.65667166416793"/>
         </scene>
         <!--Register View-->
         <scene sceneID="KPv-RH-aDq">
@@ -798,8 +798,12 @@
             <point key="canvasLocation" x="3010" y="205"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cuerpo1.1" width="612" height="795"/>
+        <image name="cuerpo1.4" width="612" height="795"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7et-eR-4s8"/>
-        <segue reference="2ny-cX-kQC"/>
+        <segue reference="W5R-ny-iVc"/>
     </inferredMetricsTieBreakers>
 </document>
