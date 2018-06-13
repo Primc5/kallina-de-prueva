@@ -647,6 +647,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="aceptar" destination="fqR-7B-cTc" eventType="touchUpInside" id="Fow-Wg-J4O"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="243" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VFM-zQ-nEJ">
                                 <rect key="frame" x="16" y="46" width="344" height="538"/>
@@ -689,6 +692,7 @@
                         <viewLayoutGuide key="safeArea" id="Wsq-tv-aZ9"/>
                     </view>
                     <connections>
+                        <outlet property="accept" destination="LOE-Hu-fdJ" id="zeu-Lt-ZIe"/>
                         <outlet property="tbMiTabla" destination="VFM-zQ-nEJ" id="BLX-xo-7I1"/>
                     </connections>
                 </viewController>

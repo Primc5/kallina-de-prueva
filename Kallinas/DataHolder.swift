@@ -239,6 +239,11 @@ class Dataholder: NSObject {
         hp1 = 100
         hp2 = 100
     }
+    
+    func subirFoto(delegate: DataHolderDelegate, link: String){
+        Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document(sID).setData(["email":self.email, "nombre":self.user, "capucha": link])
+        
+    }
 }
 @objc protocol DataHolderDelegate{
     @objc optional func dataHolderRegister(blfin:Bool)

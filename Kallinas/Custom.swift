@@ -10,7 +10,7 @@ import UIKit
 
 class  Custom: UIViewController , UITableViewDelegate, UITableViewDataSource, DataHolderDelegate{
     @IBOutlet var tbMiTabla:UITableView?
-   
+    @IBOutlet var accept:UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,12 @@ class  Custom: UIViewController , UITableViewDelegate, UITableViewDataSource, Da
         
         
        
+    }
+    
+    @IBAction func aceptar(){
+        var enlace:String
+        enlace = capuchas[myIndex]
+        Dataholder.sharedInstance.subirFoto(delegate: self, link: enlace)
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,8 +49,27 @@ class  Custom: UIViewController , UITableViewDelegate, UITableViewDataSource, Da
         cell.descargarImagenes(url: Dataholder.sharedInstance.arCapuchas[indexPath.row].sFoto!)
         
         return cell
+    }
+    
+    let capuchas=["gs://kallinas-5b7a3.appspot.com/Personalización/Capucha/captura1.1.png",
+               "gs://kallinas-5b7a3.appspot.com/Personalización/Capucha/captura1.2.png",
+               "gs://kallinas-5b7a3.appspot.com/Personalización/Capucha/captura1.3.png"
+    ]
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TVCCelula", for: indexPath as IndexPath) as UITableViewCell
         
-        
+        cell.textLabel?.text=capuchas[indexPath.row]
+        print(cell)
+        print(capuchas[indexPath.row])
+        return cell
+    }
+    
+    var myIndex = 0
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        myIndex = indexPath.row
+        print(myIndex)
     }
    
     func refreshUI() {

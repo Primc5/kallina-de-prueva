@@ -34,4 +34,5 @@ class TVCCelula: UITableViewCell, DataHolderDelegate {
         self.imgCelda1?.image = imagen
     }
 
+    
 }
