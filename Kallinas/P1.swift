@@ -13,15 +13,20 @@ class P1: UIViewController, DataHolderDelegate {
     @IBOutlet var btnDefence:UIButton?
     @IBOutlet var btnEnd:UIButton?
 
+    @IBOutlet var modo: UIImageView!
     @IBOutlet var capuchaP1: UIImageView!
     
     @IBOutlet var Top:UIButton?
     @IBOutlet var Mid:UIButton?
     @IBOutlet var Bot:UIButton?
+    @IBOutlet var imgtop: UIImageView!
+    @IBOutlet var imgmid: UIImageView!
+    @IBOutlet var imgbot: UIImageView!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        modo.image = UIImage(named: "espadaLight")
         atkAuxiliar = -1
        // btnEnd?.isEnabled = false
         // Do any additional setup after loading the view.
@@ -73,16 +78,33 @@ class P1: UIViewController, DataHolderDelegate {
         print("Normal tap")
         if(mode == 1){
             def = 1
+            imgtop.image = UIImage(named: "shield")
+            imgmid.image = UIImage(named: "vacio")
+            imgbot.image = UIImage(named: "vacio")
         }
         else if(mode == 0 && atkAuxiliar == -1){
             atkAuxiliar = 1
+            atkPrincipal = -10
+            imgtop.image = UIImage(named: "espadaLight")
+            imgmid.image = UIImage(named: "vacio")
+            imgbot.image = UIImage(named: "vacio")
         }
         else if(atkAuxiliar == 1){
             atkAuxiliar = -1
             atkPrincipal = 1
+            imgtop.image = UIImage(named: "espadaHeavy")
+            imgmid.image = UIImage(named: "vacio")
+            imgbot.image = UIImage(named: "vacio")
         }
         else{
+            if(atkPrincipal == 2){
+                imgmid.image = UIImage(named: "vacio")
+            }
+            else{
+                imgbot.image = UIImage(named: "vacio")
+            }
             atkPrincipal = 1
+            imgtop.image = UIImage(named: "espadaLight")
         }
     }
     @IBAction func longTap(_ sender: UIGestureRecognizer){
@@ -90,10 +112,16 @@ class P1: UIViewController, DataHolderDelegate {
         if sender.state == .ended {
             if(mode == 1){
                 def = 1
+                imgtop.image = UIImage(named: "shield")
+                imgmid.image = UIImage(named: "vacio")
+                imgbot.image = UIImage(named: "vacio")
             }
             else{
                 atkPrincipal = 1
                 atkAuxiliar = -1
+                imgtop.image = UIImage(named: "espadaHeavy")
+                imgmid.image = UIImage(named: "vacio")
+                imgbot.image = UIImage(named: "vacio")
             }
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
@@ -108,16 +136,33 @@ class P1: UIViewController, DataHolderDelegate {
         print("Normal tap")
         if(mode == 1){
             def = 2
+            imgtop.image = UIImage(named: "vacio")
+            imgmid.image = UIImage(named: "shield")
+            imgbot.image = UIImage(named: "vacio")
         }
         else if(mode == 0 && atkAuxiliar == -1){
             atkAuxiliar = 2
+            atkPrincipal = -10
+            imgtop.image = UIImage(named: "vacio")
+            imgmid.image = UIImage(named: "espadaLight")
+            imgbot.image = UIImage(named: "vacio")
         }
         else if(atkAuxiliar == 2){
             atkAuxiliar = -1
             atkPrincipal = 2
+            imgtop.image = UIImage(named: "vacio")
+            imgmid.image = UIImage(named: "espadaHeavy")
+            imgbot.image = UIImage(named: "vacio")
         }
         else{
+            if(atkPrincipal == 1){
+                imgtop.image = UIImage(named: "vacio")
+            }
+            else{
+                imgbot.image = UIImage(named: "vacio")
+            }
             atkPrincipal = 2
+            imgmid.image = UIImage(named: "espadaLight")
         }
     }
     
@@ -126,10 +171,16 @@ class P1: UIViewController, DataHolderDelegate {
         if sender.state == .ended {
             if(mode == 1){
                 def = 1
+                imgtop.image = UIImage(named: "vacio")
+                imgmid.image = UIImage(named: "shield")
+                imgbot.image = UIImage(named: "vacio")
             }
             else{
                 atkPrincipal = 2
                 atkAuxiliar = -1
+                imgtop.image = UIImage(named: "vacio")
+                imgmid.image = UIImage(named: "espadaHeavy")
+                imgbot.image = UIImage(named: "vacio")
             }
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
@@ -144,16 +195,33 @@ class P1: UIViewController, DataHolderDelegate {
         print("Normal tap")
         if(mode == 1){
             def = 3
+            imgtop.image = UIImage(named: "vacio")
+            imgmid.image = UIImage(named: "vacio")
+            imgbot.image = UIImage(named: "shield")
         }
         else if(mode == 0 && atkAuxiliar == -1){
             atkAuxiliar = 3
+            atkPrincipal = -10
+            imgtop.image = UIImage(named: "vacio")
+            imgmid.image = UIImage(named: "vacio")
+            imgbot.image = UIImage(named: "espadaLight")
         }
         else if(atkAuxiliar == 3){
             atkAuxiliar = -1
             atkPrincipal = 3
+            imgtop.image = UIImage(named: "vacio")
+            imgmid.image = UIImage(named: "vacio")
+            imgbot.image = UIImage(named: "espadaHeavy")
         }
         else{
+            if(atkPrincipal == 2){
+                imgmid.image = UIImage(named: "vacio")
+            }
+            else{
+                imgtop.image = UIImage(named: "vacio")
+            }
             atkPrincipal = 3
+            imgbot.image = UIImage(named: "espadaLight")
         }
     }
     
@@ -162,10 +230,16 @@ class P1: UIViewController, DataHolderDelegate {
         if sender.state == .ended {
             if(mode == 1){
                 def = 1
+                imgtop.image = UIImage(named: "vacio")
+                imgmid.image = UIImage(named: "vacio")
+                imgbot.image = UIImage(named: "shield")
             }
             else{
                 atkPrincipal = 3
                 atkAuxiliar = -1
+                imgtop.image = UIImage(named: "vacio")
+                imgmid.image = UIImage(named: "vacio")
+                imgbot.image = UIImage(named: "espadaHeavy")
             }
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
@@ -178,20 +252,55 @@ class P1: UIViewController, DataHolderDelegate {
     var mode:Int = 0
     @IBAction func clickAttack(_ sender: Any) {
         mode = 0
+        modo.image = UIImage(named: "espadaLight")
+        imgtop.image = UIImage(named: "vacio")
+        imgmid.image = UIImage(named: "vacio")
+        imgbot.image = UIImage(named: "vacio")
+        if(atkPrincipal == 1 || atkAuxiliar == 1 && atkAuxiliar != -1){
+            imgtop.image = UIImage(named: "espadaLight")
+        }
+        if(atkPrincipal == 2 || atkAuxiliar == 2  && atkAuxiliar != -1){
+            imgmid.image = UIImage(named: "espadaLight")
+        }
+        if(atkPrincipal == 3 || atkAuxiliar == 3  && atkAuxiliar != -1){
+            imgbot.image = UIImage(named: "espadaLight")
+        }
+        if(atkPrincipal == 1 && atkAuxiliar == -1){
+            imgtop.image = UIImage(named: "espadaHeavy")
+        }
+        else if(atkPrincipal == 2 && atkAuxiliar == -1){
+            imgmid.image = UIImage(named: "espadaHeavy")
+        }
+        else if(atkPrincipal == 3 && atkAuxiliar == -1){
+            imgbot.image = UIImage(named: "espadaHeavy")
+        }
     }
     
     @IBAction func clickDefence(_ sender: Any) {
         mode = 1
+        modo.image = UIImage(named: "shield")
+        imgtop.image = UIImage(named: "vacio")
+        imgmid.image = UIImage(named: "vacio")
+        imgbot.image = UIImage(named: "vacio")
+        if(def == 1){
+            imgtop.image = UIImage(named: "shield")
+        }
+        else if(def == 2){
+            imgmid.image = UIImage(named: "shield")
+        }
+        else if(def == 3){
+            imgbot.image = UIImage(named: "shield")
+        }
     }
     
-    var atkPrincipal:Int?
+    var atkPrincipal:Int = -10
     var atkAuxiliar:Int = -1
-    var def:Int?
+    var def:Int = -10
     
     
     @IBAction func end(_ sender: Any){
-        if(def != nil && atkPrincipal != nil && atkAuxiliar != nil){
-            Dataholder.sharedInstance.guardarp1(atk: atkPrincipal!, atk1: atkAuxiliar, def: def!, delegate: self)
+        if(def != -10 && atkPrincipal != -10){
+            Dataholder.sharedInstance.guardarp1(atk: atkPrincipal, atk1: atkAuxiliar, def: def, delegate: self)
             self.performSegue(withIdentifier: "transitionp2", sender: self)
         }
     }

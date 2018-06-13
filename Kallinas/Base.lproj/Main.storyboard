@@ -384,6 +384,10 @@
                         <outlet property="btnDefence" destination="JSR-4G-ah3" id="UxG-ht-eq4"/>
                         <outlet property="btnEnd" destination="ffg-hQ-jDT" id="abY-1E-mV1"/>
                         <outlet property="capuchaP1" destination="ien-X5-fwG" id="tFP-cY-KUC"/>
+                        <outlet property="imgbot" destination="NKP-gR-Dwa" id="tgs-ZA-xQP"/>
+                        <outlet property="imgmid" destination="ijo-lP-a2e" id="4bl-y1-mQs"/>
+                        <outlet property="imgtop" destination="bnA-oU-RWS" id="0zA-cm-5jZ"/>
+                        <outlet property="modo" destination="VhZ-gQ-L4P" id="Ezf-kP-VOW"/>
                         <segue destination="I7a-ED-Xs7" kind="show" identifier="transitionp2" id="eCt-sp-gRB"/>
                     </connections>
                 </viewController>
@@ -640,6 +644,10 @@
                         <outlet property="btnMid2" destination="Mv5-I6-mHL" id="EHn-db-r8s"/>
                         <outlet property="btnTop2" destination="gxt-R4-YnL" id="xrQ-lN-IcZ"/>
                         <outlet property="capuchaP2" destination="aOQ-TN-Axv" id="B9z-xq-1RC"/>
+                        <outlet property="imgbot" destination="poM-pm-3pI" id="Hxa-33-GLU"/>
+                        <outlet property="imgmid" destination="ESQ-hs-9YD" id="nSs-uK-432"/>
+                        <outlet property="imgtop" destination="TNy-Zo-ff5" id="wem-Ne-CHh"/>
+                        <outlet property="modo" destination="kJW-8v-ex5" id="IrX-Hv-y7N"/>
                         <segue destination="GZf-s5-VBi" kind="show" identifier="trbatalla" id="OUR-Dr-q0l"/>
                     </connections>
                 </viewController>

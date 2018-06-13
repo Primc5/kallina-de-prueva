@@ -13,14 +13,19 @@ class P2: UIViewController, DataHolderDelegate {
     @IBOutlet var btnDefence2:UIButton?
     @IBOutlet var btnEnd2:UIButton?
    
+    @IBOutlet var modo: UIImageView!
     @IBOutlet var capuchaP2: UIImageView!
     
     @IBOutlet var btnTop2:UIButton?
     @IBOutlet var btnMid2:UIButton?
     @IBOutlet var btnBot2:UIButton?
+    @IBOutlet var imgtop: UIImageView!
+    @IBOutlet var imgmid: UIImageView!
+    @IBOutlet var imgbot: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        modo.image = UIImage(named: "espadaLight")
         atk22 = -1
 
         // Do any additional setup after loading the view.
@@ -55,6 +60,9 @@ class P2: UIViewController, DataHolderDelegate {
         print("Normal tap")
         if(mode2 == 1){
             def2 = 1
+            imgtop.image = UIImage(named: "shield")
+            imgmid.image = UIImage(named: "")
+            imgbot.image = UIImage(named: "")
         }
         else if(mode2 == 0 && atk22 == -1){
             atk22 = 1
@@ -91,6 +99,9 @@ class P2: UIViewController, DataHolderDelegate {
         print("Normal tap")
         if(mode2 == 1){
             def2 = 2
+            imgtop.image = UIImage(named: "")
+            imgmid.image = UIImage(named: "shield")
+            imgbot.image = UIImage(named: "")
         }
         else if(mode2 == 0 && atk22 == -1){
             atk22 = 2
@@ -127,6 +138,9 @@ class P2: UIViewController, DataHolderDelegate {
         print("Normal tap")
     if(mode2 == 1){
         def2 = 3
+        imgtop.image = UIImage(named: "")
+        imgmid.image = UIImage(named: "")
+        imgbot.image = UIImage(named: "shield")
     }
     else if(mode2 == 0 && atk22 == -1){
         atk22 = 3
@@ -163,9 +177,11 @@ class P2: UIViewController, DataHolderDelegate {
     var mode2:Int = 0
     @IBAction func clickAttack2(_sender : Any){
         mode2 = 0
+        modo.image = UIImage(named: "espadaLight")
     }
     @IBAction func clickDefence2(_sender : Any){
         mode2 = 1
+        modo.image = UIImage(named: "shield")
     }
     var atk2: Int?
     var atk22: Int = -1
