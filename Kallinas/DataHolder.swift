@@ -244,6 +244,31 @@ class Dataholder: NSObject {
         Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document(sID).setData(["email":self.email, "nombre":self.user, "capucha": link])
         
     }
+    
+    func cabesa(delegate: DataHolderDelegate){
+        var clave:String = miPerfil.sRutaimagen!
+        if self.HMIMG![clave] == nil{
+            let gsReference = self.fireStorage?.reference(forURL: clave)
+            gsReference?.getData(maxSize: 1 * 1024 * 1024, completion: { (data, error) in
+                if error != nil {
+                    print(error!)
+                }
+                else{
+                    let imgDescargada = UIImage(data: data!)
+                    self.HMIMG?[clave] = imgDescargada
+                    delegate.imagen!(imagen: imgDescargada!)
+                    
+                }
+            }
+            )
+            
+        }
+        else{
+            delegate.imagen!(imagen:self.HMIMG![clave]!)
+        }
+        print("llego")
+        
+    }
 }
 @objc protocol DataHolderDelegate{
     @objc optional func dataHolderRegister(blfin:Bool)

@@ -20,7 +20,7 @@ class Perfil: NSObject {
     func setMap(valores:[String:Any]) {
         sNombre = valores["nombre"] as? String
         sEmail = valores["email"] as? String
-        sRutaimagen = valores["RutaImagen"] as? String
+        sRutaimagen = valores["capucha"] as? String
         
         print("Nombre: ",sNombre)
         print("Email: ",sEmail)
@@ -31,7 +31,7 @@ class Perfil: NSObject {
         return[
             "nombre": sNombre as Any,
             "email": sEmail as Any,
-            "RutaImagen": sRutaimagen as Any
+            "capucha": sRutaimagen as Any
         ]
     }
     
