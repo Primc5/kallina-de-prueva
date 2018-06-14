@@ -31,7 +31,7 @@ class Perfil: NSObject {
         return[
             "nombre": sNombre as Any,
             "email": sEmail as Any,
-            "capucha": sRutaimagen as Any
+            "capuchas": sRutaimagen as Any
         ]
     }
     

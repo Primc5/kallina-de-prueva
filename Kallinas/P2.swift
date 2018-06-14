@@ -27,10 +27,18 @@ class P2: UIViewController, DataHolderDelegate {
         super.viewDidLoad()
         modo.image = UIImage(named: "espadaLight")
         atkAuxiliar = -1
-
-        // Do any additional setup after loading the view.
+        self.descargarImagenes()
     }
-
+    
+    func descargarImagenes(){
+        self.capuchaP2?.image = nil
+        Dataholder.sharedInstance.cabesa(delegate: self)
+    }
+    
+    func imagen(imagen: UIImage) {
+        self.capuchaP2?.image = imagen
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(normalTap(_:)))

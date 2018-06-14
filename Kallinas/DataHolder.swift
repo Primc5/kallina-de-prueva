@@ -241,21 +241,27 @@ class Dataholder: NSObject {
     }
     
     func subirFoto(delegate: DataHolderDelegate, link: String){
-        Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document(sID).setData(["email":self.email, "nombre":self.user, "capucha": link])
+        Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document(sID).setData(["email":miPerfil.sEmail, "nombre":miPerfil.sNombre, "capucha": link])
         
     }
-    
+    var clave:String?
     func cabesa(delegate: DataHolderDelegate){
-        var clave:String = miPerfil.sRutaimagen!
-        if self.HMIMG![clave] == nil{
-            let gsReference = self.fireStorage?.reference(forURL: clave)
+        
+        if(miPerfil.sRutaimagen == nil){
+            clave = "gs://kallinas-5b7a3.appspot.com/Personalización/Capucha/captura1.1.png"
+        }
+        else{
+             clave = miPerfil.sRutaimagen!
+        }
+        if self.HMIMG![clave!] == nil{
+            let gsReference = self.fireStorage?.reference(forURL: clave!)
             gsReference?.getData(maxSize: 1 * 1024 * 1024, completion: { (data, error) in
                 if error != nil {
                     print(error!)
                 }
                 else{
                     let imgDescargada = UIImage(data: data!)
-                    self.HMIMG?[clave] = imgDescargada
+                    self.HMIMG?[self.clave!] = imgDescargada
                     delegate.imagen!(imagen: imgDescargada!)
                     
                 }
@@ -264,7 +270,7 @@ class Dataholder: NSObject {
             
         }
         else{
-            delegate.imagen!(imagen:self.HMIMG![clave]!)
+            delegate.imagen!(imagen:self.HMIMG![clave!]!)
         }
         print("llego")
         
