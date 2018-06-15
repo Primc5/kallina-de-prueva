@@ -1086,6 +1086,7 @@
                                 </state>
                                 <connections>
                                     <action selector="aceptar" destination="fqR-7B-cTc" eventType="touchUpInside" id="Fow-Wg-J4O"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="sGr-cO-73j"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="243" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VFM-zQ-nEJ">
@@ -1294,6 +1295,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Iyk-Ea-iPJ"/>
-        <segue reference="cwX-u2-45I"/>
+        <segue reference="sGr-cO-73j"/>
     </inferredMetricsTieBreakers>
 </document>
