@@ -24,7 +24,7 @@ class  Custom: UIViewController , UITableViewDelegate, UITableViewDataSource, Da
     @IBAction func aceptar(){
         var enlace:String
         enlace = capuchas[myIndex]
-        Dataholder.sharedInstance.subirFoto(delegate: self, link: enlace)
+        Dataholder.sharedInstance.subirFoto(link: enlace)
     }
     
     override func didReceiveMemoryWarning() {

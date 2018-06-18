@@ -293,7 +293,7 @@ class P2: UIViewController, DataHolderDelegate {
     
     @IBAction func end(_ sender: Any){
         if(def != -10 && atkPrincipal != -10){
-            Dataholder.sharedInstance.guardarp2(atk2: atkPrincipal, atk22: atkAuxiliar, def2: def, delegate: self)
+            Dataholder.sharedInstance.guardarp2(atk2: atkPrincipal, atk22: atkAuxiliar, def2: def)
             self.performSegue(withIdentifier: "trbatalla", sender: self)
         }
     }

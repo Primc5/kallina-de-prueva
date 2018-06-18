@@ -38,32 +38,7 @@ class VCRegisterView: UIViewController, DataHolderDelegate {
     
     
     Dataholder.sharedInstance.Registro(delegate: self, sEmail: (txtEmail?.text)!, sPass: (txtPassword?.text)!)
-    /*
-       Auth.auth().createUser(withEmail: (txtEmail?.text)!, password: (txtPassword?.text)!){
-            (email, error)in
-            if self.txtPassword?.text != self.txtRePassword?.text{
-                print("Las contraseñas no son iguales")
-            }
-            else if email != nil && self.txtUser?.text != nil{
-                print ("Te registraste")
-                
-                Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document((email?.uid)!).setData(["email"
-                    :self.txtEmail?.text, "nombre":self.txtUser?.text])
-            }
-            else{
-                print(error!)
-            }
-        }*/
     }
- 
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-  //  }
     
     func dataHolderRegister(blfin: Bool) {
         if blfin==true{

@@ -82,7 +82,7 @@ class Dataholder: NSObject {
                 print ("Te registraste")
                 
                 Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document((email?.uid)!).setData(["email"
-                    :self.email, "nombre":self.user])
+                    :self.email, "nombre":self.user, "capucha": "gs://kallinas-5b7a3.appspot.com/Personalización/Capucha/captura1.1.png"])
                 delegate.dataHolderRegister!(blfin: true)
             }
             else{
@@ -140,13 +140,13 @@ class Dataholder: NSObject {
     }
     
     
-    func guardarp1(atk:Int, atk1:Int, def:Int, delegate:DataHolderDelegate){
+    func guardarp1(atk:Int, atk1:Int, def:Int){
         p1atk = atk
         p1atk1 = atk1
         p1def = def
     }
     
-    func guardarp2(atk2:Int, atk22:Int, def2:Int, delegate:DataHolderDelegate){
+    func guardarp2(atk2:Int, atk22:Int, def2:Int){
         p2atk = atk2
         p2atk1 = atk22
         p2def = def2
@@ -158,7 +158,8 @@ class Dataholder: NSObject {
 
     var dmg:Double = 10
     var dmg2:Double = 10
-    func conflicto(delegate:DataHolderDelegate) -> Double{
+    
+    func conflicto() -> Double{
         if(p1atk1 == -1){
             dmg = dmg * 3
             if(p2def != p1atk){
@@ -196,7 +197,7 @@ class Dataholder: NSObject {
 
         return hp2
     }
-    func conflicto2 (delegate:DataHolderDelegate) -> Double{
+    func conflicto2 () -> Double{
         if(p2atk1 == -1){
             dmg2 = dmg2 * 3
             if(p1def != p2atk){
@@ -235,12 +236,12 @@ class Dataholder: NSObject {
         return hp1
     }
     
-    func reseteo (delegate:DataHolderDelegate){
+    func reseteo (){
         hp1 = 100
         hp2 = 100
     }
     
-    func subirFoto(delegate: DataHolderDelegate, link: String){
+    func subirFoto(link: String){
         Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document(sID).setData(["email":miPerfil.sEmail, "nombre":miPerfil.sNombre, "capucha": link])
         
     }
