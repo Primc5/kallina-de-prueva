@@ -34,5 +34,9 @@ class Perfil: NSObject {
             "capuchas": sRutaimagen as Any
         ]
     }
+    func setCapucha(link: String){
+        sRutaimagen = link
+        print("capucha cambiada")
+    }
     
 }

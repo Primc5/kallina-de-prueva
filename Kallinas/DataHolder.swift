@@ -72,6 +72,7 @@ class Dataholder: NSObject {
             }
         }
     }
+
     func Registro(delegate:DataHolderDelegate,sEmail:String, sPass:String) {
         Auth.auth().createUser(withEmail: email, password: pass){
             (email, error)in
@@ -152,7 +153,7 @@ class Dataholder: NSObject {
         p2def = def2
     }
     
-    func comprobarlogueado(delegate:DataHolderDelegate) -> Int{
+    func comprobarlogueado() -> Int{
         return self.logueado
     }
 
@@ -244,6 +245,7 @@ class Dataholder: NSObject {
     func subirFoto(link: String){
         Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document(sID).setData(["email":miPerfil.sEmail, "nombre":miPerfil.sNombre, "capucha": link])
         
+        miPerfil.setCapucha(capucha: link)
     }
     var clave:String?
     func cabesa(delegate: DataHolderDelegate){

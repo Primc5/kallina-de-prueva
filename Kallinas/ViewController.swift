@@ -20,7 +20,7 @@ class ViewController: UIViewController, DataHolderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         Custom?.isEnabled = false
-        if(Dataholder.sharedInstance.comprobarlogueado(delegate: self) == 1){
+        if(Dataholder.sharedInstance.comprobarlogueado() == 1){
             Custom?.isEnabled = true
         }
         Dataholder.sharedInstance.reseteo()

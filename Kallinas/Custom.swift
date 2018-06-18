@@ -25,6 +25,7 @@ class  Custom: UIViewController , UITableViewDelegate, UITableViewDataSource, Da
         var enlace:String
         enlace = capuchas[myIndex]
         Dataholder.sharedInstance.subirFoto(link: enlace)
+
     }
     
     override func didReceiveMemoryWarning() {
