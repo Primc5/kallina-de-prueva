@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Battle: UIViewController, DataHolderDelegate {
+class Battle: UIViewController{
     @IBOutlet var P1HP:UITextField?
     @IBOutlet var P2HP:UITextField?
     

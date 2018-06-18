@@ -245,8 +245,9 @@ class Dataholder: NSObject {
     func subirFoto(link: String){
         Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document(sID).setData(["email":miPerfil.sEmail, "nombre":miPerfil.sNombre, "capucha": link])
         
-        miPerfil.setCapucha(capucha: link)
+        miPerfil.setCapucha(link: link)
     }
+    
     var clave:String?
     func cabesa(delegate: DataHolderDelegate){
         
