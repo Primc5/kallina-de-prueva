@@ -15,7 +15,7 @@ class  Custom: UIViewController , UITableViewDelegate, UITableViewDataSource, Da
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        Dataholder.sharedInstance.descargarCapuchas(delegate: self)
+        DataHolder.sharedInstance.descargarCapuchas(delegate: self)
         
         
        
@@ -24,7 +24,7 @@ class  Custom: UIViewController , UITableViewDelegate, UITableViewDataSource, Da
     @IBAction func aceptar(){
         var enlace:String
         enlace = capuchas[myIndex]
-        Dataholder.sharedInstance.subirFoto(link: enlace)
+        DataHolder.sharedInstance.subirFoto(link: enlace)
 
     }
     
@@ -33,21 +33,21 @@ class  Custom: UIViewController , UITableViewDelegate, UITableViewDataSource, Da
         // Dispose of any resources that can be recreated.
     }
     
-    func DHDDescargaCiudadesCompleta(blnFin: Bool){
+    func DHDDescargaCapucha(blnFin: Bool){
         if blnFin == true{
             self.refreshUI()
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Dataholder.sharedInstance.arCapuchas.count
+        return DataHolder.sharedInstance.arCapuchas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:TVCCelula = tableView.dequeueReusableCell(withIdentifier: "micelda1")as! TVCCelula
         
-        cell.lblNombre?.text = Dataholder.sharedInstance.arCapuchas[indexPath.row].sNombre
-        cell.descargarImagenes(url: Dataholder.sharedInstance.arCapuchas[indexPath.row].sFoto!)
+        cell.lblNombre?.text = DataHolder.sharedInstance.arCapuchas[indexPath.row].sNombre
+        cell.descargarImagenes(url: DataHolder.sharedInstance.arCapuchas[indexPath.row].sFoto!)
         
         return cell
     }

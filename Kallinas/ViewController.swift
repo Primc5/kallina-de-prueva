@@ -20,10 +20,10 @@ class ViewController: UIViewController, DataHolderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         Custom?.isEnabled = false
-        if(Dataholder.sharedInstance.comprobarlogueado() == 1){
+        if(DataHolder.sharedInstance.comprobarlogueado() == 1){
             Custom?.isEnabled = true
         }
-        Dataholder.sharedInstance.reseteo()
+        DataHolder.sharedInstance.reseteo()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -33,7 +33,7 @@ class ViewController: UIViewController, DataHolderDelegate {
     }
     
     @IBAction func cliclogevent(){
-        Dataholder.sharedInstance.Login(delegate: self, sEmail: (user?.text)!, sContrasena: (pass?.text)!)
+        DataHolder.sharedInstance.Login(delegate: self, sEmail: (user?.text)!, sContrasena: (pass?.text)!)
     }
 
     func dataHolderLogin(blfin: Bool) {

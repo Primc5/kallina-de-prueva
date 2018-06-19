@@ -32,8 +32,8 @@ class Battle: UIViewController{
     var hp2:Double?
     @IBAction func next(_ sender: Any){
         if(open == 0){
-            hp2 = Dataholder.sharedInstance.conflicto()
-            hp1 = Dataholder.sharedInstance.conflicto2()
+            hp2 = DataHolder.sharedInstance.conflicto()
+            hp1 = DataHolder.sharedInstance.conflicto2()
             if(hp1?.isLess(than: 0.0))!{
                 P1HP?.text? = "Muerto"
                 muerto = 1

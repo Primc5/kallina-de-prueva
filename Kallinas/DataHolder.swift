@@ -9,11 +9,12 @@ import Firebase
 
 import UIKit
 
-class Dataholder: NSObject {
-    static let sharedInstance:Dataholder = Dataholder()
+class DataHolder: NSObject {
+    static let sharedInstance:DataHolder = DataHolder()
     
     var fireStoreDB:Firestore?
     var firStorageRef:StorageReference?
+    var fireStorage:Storage?
     
     var miPerfil:Perfil = Perfil()
     var user:String = ""
@@ -21,7 +22,7 @@ class Dataholder: NSObject {
     var pass:String = ""
     var repass:String = ""
     
-    var fireStorage:Storage?
+
     var HMIMG :[String: UIImage]?=[:]
     var arCapuchas:[Capuchas] = []
     
@@ -41,8 +42,8 @@ class Dataholder: NSObject {
         fireStoreDB = Firestore.firestore()
         fireStorage = Storage.storage()
         firStorageRef = fireStorage?.reference()
-
     }
+    
     var sID:String = ""
     func Login(delegate:DataHolderDelegate, sEmail:String, sContrasena:String) {
         print("Hola " + sEmail)
@@ -50,12 +51,12 @@ class Dataholder: NSObject {
         Auth.auth().signIn(withEmail: sEmail, password: sContrasena) {(email, error) in
             if sEmail != ""{
                 self.sID = (email?.uid)!
-                let ruta = Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document((email?.uid)!)
+                let ruta = DataHolder.sharedInstance.fireStoreDB?.collection("Perfiles").document((email?.uid)!)
                 
                 ruta?.getDocument { (document, error) in
                     if document != nil{
                         
-                        Dataholder.sharedInstance.miPerfil.setMap(valores: (document?.data())!)
+                        DataHolder.sharedInstance.miPerfil.setMap(valores: (document?.data())!)
                         
                         delegate.dataHolderLogin!(blfin: true)
                         self.logueado = 1
@@ -82,7 +83,7 @@ class Dataholder: NSObject {
             else if self.email != "" && self.user != ""{
                 print ("Te registraste")
                 
-                Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document((email?.uid)!).setData(["email"
+                DataHolder.sharedInstance.fireStoreDB?.collection("Perfiles").document((email?.uid)!).setData(["email"
                     :self.email, "nombre":self.user, "capucha": "gs://kallinas-5b7a3.appspot.com/Personalización/Capucha/captura1.1.png"])
                 delegate.dataHolderRegister!(blfin: true)
             }
@@ -95,10 +96,10 @@ class Dataholder: NSObject {
     
     func descargarCapuchas(delegate:DataHolderDelegate){
         
-        Dataholder.sharedInstance.fireStoreDB?.collection("Capuchas").getDocuments() { (querySnapshot, err) in
+        DataHolder.sharedInstance.fireStoreDB?.collection("Capuchas").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
-                delegate.DHDDescargaCiudadesCompleta!(blnFin: false)
+                delegate.DHDDescargaCapucha!(blnFin: false)
             } else {
                 self.arCapuchas=[]
                 for document in querySnapshot!.documents {
@@ -109,7 +110,7 @@ class Dataholder: NSObject {
                     print("\(document.documentID) => \(document.data())")
                 }
                 print("----->>>> ",self.arCapuchas.count)
-                delegate.DHDDescargaCiudadesCompleta!(blnFin: true)
+                delegate.DHDDescargaCapucha!(blnFin: true)
             }
             //self.tbMiTabla?.reloadData()
         }
@@ -198,6 +199,7 @@ class Dataholder: NSObject {
 
         return hp2
     }
+    
     func conflicto2 () -> Double{
         if(p2atk1 == -1){
             dmg2 = dmg2 * 3
@@ -243,7 +245,7 @@ class Dataholder: NSObject {
     }
     
     func subirFoto(link: String){
-        Dataholder.sharedInstance.fireStoreDB?.collection("Perfiles").document(sID).setData(["email":miPerfil.sEmail, "nombre":miPerfil.sNombre, "capucha": link])
+        DataHolder.sharedInstance.fireStoreDB?.collection("Perfiles").document(sID).setData(["email":miPerfil.sEmail, "nombre":miPerfil.sNombre, "capucha": link])
         
         miPerfil.setCapucha(link: link)
     }
@@ -277,12 +279,12 @@ class Dataholder: NSObject {
             delegate.imagen!(imagen:self.HMIMG![clave!]!)
         }
         print("llego")
-        
     }
+    
 }
 @objc protocol DataHolderDelegate{
     @objc optional func dataHolderRegister(blfin:Bool)
     @objc optional func dataHolderLogin(blfin:Bool)
-    @objc optional func DHDDescargaCiudadesCompleta(blnFin:Bool)
+    @objc optional func DHDDescargaCapucha(blnFin:Bool)
     @objc optional func imagen(imagen:UIImage)
 }

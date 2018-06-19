@@ -31,13 +31,13 @@ class VCRegisterView: UIViewController, DataHolderDelegate {
    @IBAction func clickRegister(){
     
     
-    Dataholder.sharedInstance.email = (txtEmail?.text)!
-    Dataholder.sharedInstance.user = (txtUser?.text)!
-    Dataholder.sharedInstance.pass = (txtPassword?.text)!
-    Dataholder.sharedInstance.repass = (txtRePassword?.text)!
+    DataHolder.sharedInstance.email = (txtEmail?.text)!
+    DataHolder.sharedInstance.user = (txtUser?.text)!
+    DataHolder.sharedInstance.pass = (txtPassword?.text)!
+    DataHolder.sharedInstance.repass = (txtRePassword?.text)!
     
     
-    Dataholder.sharedInstance.Registro(delegate: self, sEmail: (txtEmail?.text)!, sPass: (txtPassword?.text)!)
+    DataHolder.sharedInstance.Registro(delegate: self, sEmail: (txtEmail?.text)!, sPass: (txtPassword?.text)!)
     }
     
     func dataHolderRegister(blfin: Bool) {

@@ -27,7 +27,7 @@ class TVCCelula: UITableViewCell, DataHolderDelegate {
     
     func descargarImagenes(url:String){
         self.imgCelda1?.image = nil
-        Dataholder.sharedInstance.executeimagen(clave: url, delegate: self)
+        DataHolder.sharedInstance.executeimagen(clave: url, delegate: self)
 
     }
     func imagen(imagen: UIImage) {

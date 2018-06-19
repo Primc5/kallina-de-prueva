@@ -32,7 +32,7 @@ class P2: UIViewController, DataHolderDelegate {
     
     func descargarImagenes(){
         self.capuchaP2?.image = nil
-        Dataholder.sharedInstance.cabesa(delegate: self)
+        DataHolder.sharedInstance.cabesa(delegate: self)
     }
     
     func imagen(imagen: UIImage) {
@@ -246,7 +246,7 @@ class P2: UIViewController, DataHolderDelegate {
     
     @IBAction func end(_ sender: Any){
         if(def != -10 && atkPrincipal != -10){
-            Dataholder.sharedInstance.guardarp2(atk2: atkPrincipal, atk22: atkAuxiliar, def2: def)
+            DataHolder.sharedInstance.guardarp2(atk2: atkPrincipal, atk22: atkAuxiliar, def2: def)
             self.performSegue(withIdentifier: "trbatalla", sender: self)
         }
     }
